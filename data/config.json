@@ -1,0 +1,97 @@
+{
+  "as_of": "2026-10-22",
+  "market": {
+    "mortgage": {
+      "rate_pct": 7.32,
+      "investment_spread_pct": 0.75,
+      "source": "Freddie Mac PMMS 2026-10-22 (7.32%) + 0.75pt investor spread"
+    },
+    "property_tax": {
+      "rate_pct": 0.0095,
+      "by_county": {
+        "Thurston": 0.0095,
+        "Lewis": 0.0087,
+        "Pierce": 0.0092,
+        "Mason": 0.009
+      },
+      "source": "WA DOR 2026 effective levy, county average"
+    },
+    "insurance": {
+      "annual": 1800,
+      "afh_uplift_pct": 0.15,
+      "source": "WA landlord policy avg 2026, +15% AFH liability uplift"
+    },
+    "vacancy_pct": 0.05,
+    "management_pct": 0.08,
+    "maintenance_pct": 0.08,
+    "appreciation_pct": 0.03,
+    "selling_cost_pct": 0.06,
+    "rent_growth_pct": 0.03,
+    "expense_growth_pct": 0.03,
+    "discount_rate_pct": 0.1,
+    "closing_cost_pct": 0.02,
+    "down_payment_pct": 0.25,
+    "loan_term_years": 30,
+    "hold_years": 5
+  },
+  "deal": {
+    "holding_cost": 20000,
+    "holding_months": 6,
+    "holding_covers": [
+      "mortgage",
+      "tax",
+      "insurance",
+      "HOA"
+    ],
+    "remodel": 60000,
+    "extra": 10000
+  },
+  "scenarios": {
+    "prices": [
+      450000,
+      475000,
+      500000,
+      525000,
+      550000
+    ],
+    "rents": [
+      3500,
+      4125,
+      4750,
+      5375,
+      6000
+    ],
+    "rent_basis": "monthly lease for the AFH-ready home (single long-term lease)"
+  },
+  "filters": {
+    "min_price": 450000,
+    "max_price": 550000,
+    "min_beds": 3,
+    "require_garage": true,
+    "min_garage_sf": 400,
+    "min_score": 6.5
+  },
+  "score_weights": {
+    "cash_flow": 0.2,
+    "dscr": 0.15,
+    "irr": 0.3,
+    "payback": 0.15,
+    "roi": 0.1,
+    "rent_cushion": 0.1
+  },
+  "watch": {
+    "areas": [
+      "98531",
+      "98532",
+      "98501",
+      "98502",
+      "98503",
+      "98506",
+      "98512",
+      "98513",
+      "98516",
+      "98579"
+    ],
+    "label": "Lewis + Thurston County NWMLS sweep"
+  }
+}

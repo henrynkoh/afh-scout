@@ -1,0 +1,14 @@
+{
+  "name": "afh-scout",
+  "version": "1.0.0",
+  "private": true,
+  "description": "NWMLS monitor and 25-scenario feasibility engine for garage-to-AFH conversions",
+  "bin": { "afh-scout": "./scout.js" },
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "test": "node scout.js selftest",
+    "scan": "node scout.js scan",
+    "monitor": "node scout.js monitor",
+    "index": "node scout.js index"
+  }
+}

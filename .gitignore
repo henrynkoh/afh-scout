@@ -1,0 +1,7 @@
+data/properties/
+data/state.json
+data/.monitor.lock
+out/
+logs/
+.DS_Store
+*.log
