@@ -1,0 +1,147 @@
+{
+  "source": "NWMLS",
+  "source_area": "98513",
+  "mls_id": "2501817",
+  "address": "6110 Carlycole Pl SE, Olympia, WA 98513",
+  "street": "6110 Carlycole Pl SE",
+  "city": "Olympia",
+  "state": "WA",
+  "zip": "98513",
+  "price": 499990,
+  "status": "Active",
+  "beds": 3,
+  "baths": 3,
+  "sqft": 1797,
+  "lot_acres": 0.09,
+  "on_market": "2026-04-03T00:00:00.000Z",
+  "price_change": -40000,
+  "hoa_monthly": 78,
+  "type": "Single Family Residence",
+  "garage_yn": null,
+  "lat": 46.992528,
+  "lon": -122.756039,
+  "hero": "https://bpp.mlsgrid.com/images/NWM158129468/0cb3a356-a5d1-4ec2-9347-ad3fb0b4b369.jpg",
+  "nwmls_url": "https://www.nwmls.com/homes-for-sale/98513",
+  "enrich_error": "HTTP 403 for https://www.zillow.com/homes/6110-Carlycole-Pl-SE%2C-Olympia%2C-WA-98513_rb/",
+  "slug": "6110-carlycole-pl-se-olympia-wa-98513",
+  "screen": {
+    "pass": true,
+    "checks": [
+      {
+        "name": "Listing price inside scenario band",
+        "state": "pass",
+        "value": 499990,
+        "rule": "$450,000 - $550,000"
+      },
+      {
+        "name": "Actively for sale",
+        "state": "pass",
+        "value": "Active",
+        "rule": "Active / coming soon"
+      },
+      {
+        "name": "Single-family residence",
+        "state": "pass",
+        "value": "Single Family Residence",
+        "rule": "Detached house (AFH occupancy)"
+      },
+      {
+        "name": "Bedrooms for the existing home",
+        "state": "pass",
+        "value": 3,
+        "rule": ">= 3 bd in main home"
+      },
+      {
+        "name": "Garage to convert",
+        "state": "unknown",
+        "value": "unknown",
+        "rule": ">= 400 sf garage (2 bedrooms needs ~500-689 sf, 3 needs ~690-736 sf)"
+      },
+      {
+        "name": "HOA carry",
+        "state": "pass",
+        "value": "$78/mo",
+        "rule": "<= $1,200/yr"
+      },
+      {
+        "name": "Public sewer",
+        "state": "unknown",
+        "value": "not stated",
+        "rule": "Public sewer preferred; septic needs health jurisdiction capacity sign-off"
+      },
+      {
+        "name": "County tax rate known",
+        "state": "unknown",
+        "value": "unknown",
+        "rule": "Thurston / Lewis levy table"
+      }
+    ],
+    "fails": [],
+    "unknowns": [
+      "Garage to convert",
+      "Public sewer",
+      "County tax rate known"
+    ],
+    "garage_beds": null
+  },
+  "last_result": {
+    "run_date": "2026-10-25",
+    "best_score": 4.9624541536944315,
+    "verdict": "PASS",
+    "best_case": "At asking $499,990, best tested rent $6,000/mo -> score 5.0/10, $1,324/mo cash flow, IRR 5.4%",
+    "asking_score": 4.9624541536944315,
+    "asking_verdict": "PASS",
+    "asking_case": {
+      "price": 499990,
+      "rent": 6000,
+      "score": 4.96,
+      "npv": 56495,
+      "irr": 5.4,
+      "cf_mo": 1324,
+      "roi_pct": 125.7
+    },
+    "grid_best_score": 6.129195176064714,
+    "grid_best_verdict": "MARGINAL",
+    "rent_needed_at_ask": 6500,
+    "max_price_at_top_rent": 435000,
+    "cash_needed": 224997,
+    "passing_combos": 0,
+    "top": [
+      {
+        "price": 450000,
+        "rent": 6000,
+        "score": 6.13,
+        "irr": 7.2,
+        "cf_mo": 1640
+      },
+      {
+        "price": 475000,
+        "rent": 6000,
+        "score": 5.49,
+        "irr": 6.26,
+        "cf_mo": 1482
+      },
+      {
+        "price": 500000,
+        "rent": 6000,
+        "score": 4.96,
+        "irr": 5.39,
+        "cf_mo": 1324
+      },
+      {
+        "price": 525000,
+        "rent": 6000,
+        "score": 4.51,
+        "irr": 4.58,
+        "cf_mo": 1165
+      },
+      {
+        "price": 450000,
+        "rent": 5375,
+        "score": 4.25,
+        "irr": 4.05,
+        "cf_mo": 1147
+      }
+    ]
+  }
+}

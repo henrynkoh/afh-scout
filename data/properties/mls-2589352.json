@@ -1,0 +1,147 @@
+{
+  "source": "NWMLS",
+  "source_area": "98513",
+  "mls_id": "2589352",
+  "address": "8718 62nd Ct SE, Olympia, WA 98513",
+  "street": "8718 62nd Ct SE",
+  "city": "Olympia",
+  "state": "WA",
+  "zip": "98513",
+  "price": 549990,
+  "status": "Active",
+  "beds": 4,
+  "baths": 3,
+  "sqft": 2090,
+  "lot_acres": 0.09,
+  "on_market": "2026-10-02T00:00:00.000Z",
+  "price_change": 0,
+  "hoa_monthly": 78,
+  "type": "Single Family Residence",
+  "garage_yn": null,
+  "lat": 46.992062,
+  "lon": -122.755689,
+  "hero": "https://bpp.mlsgrid.com/images/NWM163263497/abe486d3-bac2-4102-b4c2-faa249dfa56e.jpg",
+  "nwmls_url": "https://www.nwmls.com/homes-for-sale/98513",
+  "enrich_error": "HTTP 429 for https://www.zillow.com/homes/8718-62nd-Ct-SE%2C-Olympia%2C-WA-98513_rb/",
+  "slug": "8718-62nd-ct-se-olympia-wa-98513",
+  "screen": {
+    "pass": true,
+    "checks": [
+      {
+        "name": "Listing price inside scenario band",
+        "state": "pass",
+        "value": 549990,
+        "rule": "$450,000 - $550,000"
+      },
+      {
+        "name": "Actively for sale",
+        "state": "pass",
+        "value": "Active",
+        "rule": "Active / coming soon"
+      },
+      {
+        "name": "Single-family residence",
+        "state": "pass",
+        "value": "Single Family Residence",
+        "rule": "Detached house (AFH occupancy)"
+      },
+      {
+        "name": "Bedrooms for the existing home",
+        "state": "pass",
+        "value": 4,
+        "rule": ">= 3 bd in main home"
+      },
+      {
+        "name": "Garage to convert",
+        "state": "unknown",
+        "value": "unknown",
+        "rule": ">= 400 sf garage (2 bedrooms needs ~500-689 sf, 3 needs ~690-736 sf)"
+      },
+      {
+        "name": "HOA carry",
+        "state": "pass",
+        "value": "$78/mo",
+        "rule": "<= $1,200/yr"
+      },
+      {
+        "name": "Public sewer",
+        "state": "unknown",
+        "value": "not stated",
+        "rule": "Public sewer preferred; septic needs health jurisdiction capacity sign-off"
+      },
+      {
+        "name": "County tax rate known",
+        "state": "unknown",
+        "value": "unknown",
+        "rule": "Thurston / Lewis levy table"
+      }
+    ],
+    "fails": [],
+    "unknowns": [
+      "Garage to convert",
+      "Public sewer",
+      "County tax rate known"
+    ],
+    "garage_beds": null
+  },
+  "last_result": {
+    "run_date": "2026-10-25",
+    "best_score": 3.99979206199574,
+    "verdict": "PASS",
+    "best_case": "At asking $549,990, best tested rent $6,000/mo -> score 4.0/10, $1,007/mo cash flow, IRR 3.8%",
+    "asking_score": 3.99979206199574,
+    "asking_verdict": "PASS",
+    "asking_case": {
+      "price": 549990,
+      "rent": 6000,
+      "score": 4,
+      "npv": 42629,
+      "irr": 3.83,
+      "cf_mo": 1007,
+      "roi_pct": 118.4
+    },
+    "grid_best_score": 6.129195176064714,
+    "grid_best_verdict": "MARGINAL",
+    "rent_needed_at_ask": 6900,
+    "max_price_at_top_rent": 435000,
+    "cash_needed": 238497,
+    "passing_combos": 0,
+    "top": [
+      {
+        "price": 450000,
+        "rent": 6000,
+        "score": 6.13,
+        "irr": 7.2,
+        "cf_mo": 1640
+      },
+      {
+        "price": 475000,
+        "rent": 6000,
+        "score": 5.49,
+        "irr": 6.26,
+        "cf_mo": 1482
+      },
+      {
+        "price": 500000,
+        "rent": 6000,
+        "score": 4.96,
+        "irr": 5.39,
+        "cf_mo": 1324
+      },
+      {
+        "price": 525000,
+        "rent": 6000,
+        "score": 4.51,
+        "irr": 4.58,
+        "cf_mo": 1165
+      },
+      {
+        "price": 450000,
+        "rent": 5375,
+        "score": 4.25,
+        "irr": 4.05,
+        "cf_mo": 1147
+      }
+    ]
+  }
+}

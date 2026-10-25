@@ -1,0 +1,147 @@
+{
+  "source": "NWMLS",
+  "source_area": "98516",
+  "mls_id": "2551573",
+  "address": "8959 Corona St NE, Lacey, WA 98516",
+  "street": "8959 Corona St NE",
+  "city": "Lacey",
+  "state": "WA",
+  "zip": "98516",
+  "price": 540000,
+  "status": "Active",
+  "beds": 4,
+  "baths": 3,
+  "sqft": 2502,
+  "lot_acres": 0.09,
+  "on_market": "2026-07-09T00:00:00.000Z",
+  "price_change": -69000,
+  "hoa_monthly": 57,
+  "type": "Single Family Residence",
+  "garage_yn": null,
+  "lat": 47.080104,
+  "lon": -122.749839,
+  "hero": "https://bpp.mlsgrid.com/images/NWM161017549/c163e391-bfba-4ad3-b002-15bd16945892.jpg",
+  "nwmls_url": "https://www.nwmls.com/homes-for-sale/98516",
+  "enrich_error": "HTTP 429 for https://www.zillow.com/homes/8959-Corona-St-NE%2C-Lacey%2C-WA-98516_rb/",
+  "slug": "8959-corona-st-ne-lacey-wa-98516",
+  "screen": {
+    "pass": true,
+    "checks": [
+      {
+        "name": "Listing price inside scenario band",
+        "state": "pass",
+        "value": 540000,
+        "rule": "$450,000 - $550,000"
+      },
+      {
+        "name": "Actively for sale",
+        "state": "pass",
+        "value": "Active",
+        "rule": "Active / coming soon"
+      },
+      {
+        "name": "Single-family residence",
+        "state": "pass",
+        "value": "Single Family Residence",
+        "rule": "Detached house (AFH occupancy)"
+      },
+      {
+        "name": "Bedrooms for the existing home",
+        "state": "pass",
+        "value": 4,
+        "rule": ">= 3 bd in main home"
+      },
+      {
+        "name": "Garage to convert",
+        "state": "unknown",
+        "value": "unknown",
+        "rule": ">= 400 sf garage (2 bedrooms needs ~500-689 sf, 3 needs ~690-736 sf)"
+      },
+      {
+        "name": "HOA carry",
+        "state": "pass",
+        "value": "$57/mo",
+        "rule": "<= $1,200/yr"
+      },
+      {
+        "name": "Public sewer",
+        "state": "unknown",
+        "value": "not stated",
+        "rule": "Public sewer preferred; septic needs health jurisdiction capacity sign-off"
+      },
+      {
+        "name": "County tax rate known",
+        "state": "unknown",
+        "value": "unknown",
+        "rule": "Thurston / Lewis levy table"
+      }
+    ],
+    "fails": [],
+    "unknowns": [
+      "Garage to convert",
+      "Public sewer",
+      "County tax rate known"
+    ],
+    "garage_beds": null
+  },
+  "last_result": {
+    "run_date": "2026-10-25",
+    "best_score": 4.282456814495885,
+    "verdict": "PASS",
+    "best_case": "At asking $540,000, best tested rent $6,000/mo -> score 4.3/10, $1,091/mo cash flow, IRR 4.2%",
+    "asking_score": 4.282456814495885,
+    "asking_verdict": "PASS",
+    "asking_case": {
+      "price": 540000,
+      "rent": 6000,
+      "score": 4.28,
+      "npv": 46734,
+      "irr": 4.24,
+      "cf_mo": 1091,
+      "roi_pct": 120.4
+    },
+    "grid_best_score": 6.221483307863541,
+    "grid_best_verdict": "CONDITIONAL",
+    "rent_needed_at_ask": 6800,
+    "max_price_at_top_rent": 440000,
+    "cash_needed": 235800,
+    "passing_combos": 0,
+    "top": [
+      {
+        "price": 450000,
+        "rent": 6000,
+        "score": 6.22,
+        "irr": 7.33,
+        "cf_mo": 1661
+      },
+      {
+        "price": 475000,
+        "rent": 6000,
+        "score": 5.58,
+        "irr": 6.39,
+        "cf_mo": 1503
+      },
+      {
+        "price": 500000,
+        "rent": 6000,
+        "score": 5.03,
+        "irr": 5.52,
+        "cf_mo": 1345
+      },
+      {
+        "price": 525000,
+        "rent": 6000,
+        "score": 4.58,
+        "irr": 4.7,
+        "cf_mo": 1186
+      },
+      {
+        "price": 450000,
+        "rent": 5375,
+        "score": 4.32,
+        "irr": 4.19,
+        "cf_mo": 1168
+      }
+    ]
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "source": "NWMLS",
+  "source_area": "98513",
+  "mls_id": "2587315",
+  "address": "6122 Carlycole Pl SE, Olympia, WA 98513",
+  "street": "6122 Carlycole Pl SE",
+  "city": "Olympia",
+  "state": "WA",
+  "zip": "98513",
+  "price": 569990,
+  "status": "Active",
+  "beds": 5,
+  "baths": 3,
+  "sqft": 2489,
+  "lot_acres": 0.09,
+  "on_market": "2026-09-25T00:00:00.000Z",
+  "price_change": 0,
+  "hoa_monthly": 78,
+  "type": "Single Family Residence",
+  "garage_yn": null,
+  "lat": 46.992212,
+  "lon": -122.756039,
+  "hero": "https://bpp.mlsgrid.com/images/NWM163144461/ed3895af-f7b2-411f-8d93-75ce1cd0f040.jpg",
+  "nwmls_url": "https://www.nwmls.com/homes-for-sale/98513",
+  "enrich_error": "HTTP 429 for https://www.zillow.com/homes/6122-Carlycole-Pl-SE%2C-Olympia%2C-WA-98513_rb/",
+  "screen": {
+    "pass": false,
+    "checks": [
+      {
+        "name": "Listing price inside scenario band",
+        "state": "fail",
+        "value": 569990,
+        "rule": "$450,000 - $550,000"
+      },
+      {
+        "name": "Actively for sale",
+        "state": "pass",
+        "value": "Active",
+        "rule": "Active / coming soon"
+      },
+      {
+        "name": "Single-family residence",
+        "state": "pass",
+        "value": "Single Family Residence",
+        "rule": "Detached house (AFH occupancy)"
+      },
+      {
+        "name": "Bedrooms for the existing home",
+        "state": "pass",
+        "value": 5,
+        "rule": ">= 3 bd in main home"
+      },
+      {
+        "name": "Garage to convert",
+        "state": "unknown",
+        "value": "unknown",
+        "rule": ">= 400 sf garage (2 bedrooms needs ~500-689 sf, 3 needs ~690-736 sf)"
+      },
+      {
+        "name": "HOA carry",
+        "state": "pass",
+        "value": "$78/mo",
+        "rule": "<= $1,200/yr"
+      },
+      {
+        "name": "Public sewer",
+        "state": "unknown",
+        "value": "not stated",
+        "rule": "Public sewer preferred; septic needs health jurisdiction capacity sign-off"
+      },
+      {
+        "name": "County tax rate known",
+        "state": "unknown",
+        "value": "unknown",
+        "rule": "Thurston / Lewis levy table"
+      }
+    ],
+    "fails": [
+      "Listing price inside scenario band"
+    ],
+    "unknowns": [
+      "Garage to convert",
+      "Public sewer",
+      "County tax rate known"
+    ],
+    "garage_beds": null
+  }
+}

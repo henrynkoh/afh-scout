@@ -1,0 +1,147 @@
+{
+  "source": "NWMLS",
+  "source_area": "98513",
+  "mls_id": "2577195",
+  "address": "8328 49th Loop SE, Olympia, WA 98513",
+  "street": "8328 49th Loop SE",
+  "city": "Olympia",
+  "state": "WA",
+  "zip": "98513",
+  "price": 545000,
+  "status": "Active",
+  "beds": 4,
+  "baths": 3,
+  "sqft": 2000,
+  "lot_acres": 0.14,
+  "on_market": "2026-09-12T00:00:00.000Z",
+  "price_change": -15000,
+  "hoa_monthly": 40,
+  "type": "Single Family Residence",
+  "garage_yn": null,
+  "lat": 47.001668,
+  "lon": -122.761135,
+  "hero": "https://bpp.mlsgrid.com/images/NWM162534028/c4bd8481-c38f-4abe-a826-e3715bc6b714.jpg",
+  "nwmls_url": "https://www.nwmls.com/homes-for-sale/98513",
+  "enrich_error": "HTTP 429 for https://www.zillow.com/homes/8328-49th-Loop-SE%2C-Olympia%2C-WA-98513_rb/",
+  "slug": "8328-49th-loop-se-olympia-wa-98513",
+  "screen": {
+    "pass": true,
+    "checks": [
+      {
+        "name": "Listing price inside scenario band",
+        "state": "pass",
+        "value": 545000,
+        "rule": "$450,000 - $550,000"
+      },
+      {
+        "name": "Actively for sale",
+        "state": "pass",
+        "value": "Active",
+        "rule": "Active / coming soon"
+      },
+      {
+        "name": "Single-family residence",
+        "state": "pass",
+        "value": "Single Family Residence",
+        "rule": "Detached house (AFH occupancy)"
+      },
+      {
+        "name": "Bedrooms for the existing home",
+        "state": "pass",
+        "value": 4,
+        "rule": ">= 3 bd in main home"
+      },
+      {
+        "name": "Garage to convert",
+        "state": "unknown",
+        "value": "unknown",
+        "rule": ">= 400 sf garage (2 bedrooms needs ~500-689 sf, 3 needs ~690-736 sf)"
+      },
+      {
+        "name": "HOA carry",
+        "state": "pass",
+        "value": "$40/mo",
+        "rule": "<= $1,200/yr"
+      },
+      {
+        "name": "Public sewer",
+        "state": "unknown",
+        "value": "not stated",
+        "rule": "Public sewer preferred; septic needs health jurisdiction capacity sign-off"
+      },
+      {
+        "name": "County tax rate known",
+        "state": "unknown",
+        "value": "unknown",
+        "rule": "Thurston / Lewis levy table"
+      }
+    ],
+    "fails": [],
+    "unknowns": [
+      "Garage to convert",
+      "Public sewer",
+      "County tax rate known"
+    ],
+    "garage_beds": null
+  },
+  "last_result": {
+    "run_date": "2026-10-25",
+    "best_score": 4.237634110941911,
+    "verdict": "PASS",
+    "best_case": "At asking $545,000, best tested rent $6,000/mo -> score 4.2/10, $1,077/mo cash flow, IRR 4.2%",
+    "asking_score": 4.237634110941911,
+    "asking_verdict": "PASS",
+    "asking_case": {
+      "price": 545000,
+      "rent": 6000,
+      "score": 4.24,
+      "npv": 46427,
+      "irr": 4.19,
+      "cf_mo": 1077,
+      "roi_pct": 120.1
+    },
+    "grid_best_score": 6.296636189346015,
+    "grid_best_verdict": "CONDITIONAL",
+    "rent_needed_at_ask": 6800,
+    "max_price_at_top_rent": 445000,
+    "cash_needed": 237150,
+    "passing_combos": 0,
+    "top": [
+      {
+        "price": 450000,
+        "rent": 6000,
+        "score": 6.3,
+        "irr": 7.44,
+        "cf_mo": 1678
+      },
+      {
+        "price": 475000,
+        "rent": 6000,
+        "score": 5.65,
+        "irr": 6.5,
+        "cf_mo": 1520
+      },
+      {
+        "price": 500000,
+        "rent": 6000,
+        "score": 5.09,
+        "irr": 5.62,
+        "cf_mo": 1362
+      },
+      {
+        "price": 525000,
+        "rent": 6000,
+        "score": 4.63,
+        "irr": 4.8,
+        "cf_mo": 1203
+      },
+      {
+        "price": 450000,
+        "rent": 5375,
+        "score": 4.38,
+        "irr": 4.29,
+        "cf_mo": 1185
+      }
+    ]
+  }
+}

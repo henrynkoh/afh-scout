@@ -1,0 +1,147 @@
+{
+  "source": "NWMLS",
+  "source_area": "98513",
+  "mls_id": "2597812",
+  "address": "6100 60th Ct SE, Lacey, WA 98513",
+  "street": "6100 60th Ct SE",
+  "city": "Lacey",
+  "state": "WA",
+  "zip": "98513",
+  "price": 493000,
+  "status": "Active",
+  "beds": 3,
+  "baths": 2,
+  "sqft": 1519,
+  "lot_acres": 0.18,
+  "on_market": "2026-10-23T00:00:00.000Z",
+  "price_change": 0,
+  "hoa_monthly": 4,
+  "type": "Single Family Residence",
+  "garage_yn": null,
+  "lat": 46.994874,
+  "lon": -122.801122,
+  "hero": "https://bpp.mlsgrid.com/images/NWM163779422/65a9e23a-edf8-4473-a42e-60f0fbd6884e.jpg",
+  "nwmls_url": "https://www.nwmls.com/homes-for-sale/98513",
+  "enrich_error": "HTTP 429 for https://www.zillow.com/homes/6100-60th-Ct-SE%2C-Lacey%2C-WA-98513_rb/",
+  "slug": "6100-60th-ct-se-lacey-wa-98513",
+  "screen": {
+    "pass": true,
+    "checks": [
+      {
+        "name": "Listing price inside scenario band",
+        "state": "pass",
+        "value": 493000,
+        "rule": "$450,000 - $550,000"
+      },
+      {
+        "name": "Actively for sale",
+        "state": "pass",
+        "value": "Active",
+        "rule": "Active / coming soon"
+      },
+      {
+        "name": "Single-family residence",
+        "state": "pass",
+        "value": "Single Family Residence",
+        "rule": "Detached house (AFH occupancy)"
+      },
+      {
+        "name": "Bedrooms for the existing home",
+        "state": "pass",
+        "value": 3,
+        "rule": ">= 3 bd in main home"
+      },
+      {
+        "name": "Garage to convert",
+        "state": "unknown",
+        "value": "unknown",
+        "rule": ">= 400 sf garage (2 bedrooms needs ~500-689 sf, 3 needs ~690-736 sf)"
+      },
+      {
+        "name": "HOA carry",
+        "state": "pass",
+        "value": "$4/mo",
+        "rule": "<= $1,200/yr"
+      },
+      {
+        "name": "Public sewer",
+        "state": "unknown",
+        "value": "not stated",
+        "rule": "Public sewer preferred; septic needs health jurisdiction capacity sign-off"
+      },
+      {
+        "name": "County tax rate known",
+        "state": "unknown",
+        "value": "unknown",
+        "rule": "Thurston / Lewis levy table"
+      }
+    ],
+    "fails": [],
+    "unknowns": [
+      "Garage to convert",
+      "Public sewer",
+      "County tax rate known"
+    ],
+    "garage_beds": null
+  },
+  "last_result": {
+    "run_date": "2026-10-25",
+    "best_score": 5.356062539988173,
+    "verdict": "MARGINAL",
+    "best_case": "At asking $493,000, best tested rent $6,000/mo -> score 5.4/10, $1,442/mo cash flow, IRR 6.1%",
+    "asking_score": 5.356062539988173,
+    "asking_verdict": "MARGINAL",
+    "asking_case": {
+      "price": 493000,
+      "rent": 6000,
+      "score": 5.36,
+      "npv": 63134,
+      "irr": 6.07,
+      "cf_mo": 1442,
+      "roi_pct": 128.9
+    },
+    "grid_best_score": 6.457091903284575,
+    "grid_best_verdict": "CONDITIONAL",
+    "rent_needed_at_ask": 6350,
+    "max_price_at_top_rent": 450000,
+    "cash_needed": 223110,
+    "passing_combos": 0,
+    "top": [
+      {
+        "price": 450000,
+        "rent": 6000,
+        "score": 6.46,
+        "irr": 7.67,
+        "cf_mo": 1714
+      },
+      {
+        "price": 475000,
+        "rent": 6000,
+        "score": 5.8,
+        "irr": 6.72,
+        "cf_mo": 1556
+      },
+      {
+        "price": 500000,
+        "rent": 6000,
+        "score": 5.21,
+        "irr": 5.83,
+        "cf_mo": 1398
+      },
+      {
+        "price": 525000,
+        "rent": 6000,
+        "score": 4.74,
+        "irr": 5.01,
+        "cf_mo": 1239
+      },
+      {
+        "price": 450000,
+        "rent": 5375,
+        "score": 4.5,
+        "irr": 4.52,
+        "cf_mo": 1221
+      }
+    ]
+  }
+}

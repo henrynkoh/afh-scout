@@ -1,0 +1,147 @@
+{
+  "source": "NWMLS",
+  "source_area": "98513",
+  "mls_id": "2565678",
+  "address": "6951 Radius Loop SE, Olympia, WA 98513",
+  "street": "6951 Radius Loop SE",
+  "city": "Olympia",
+  "state": "WA",
+  "zip": "98513",
+  "price": 549000,
+  "status": "Active",
+  "beds": 3,
+  "baths": 3,
+  "sqft": 2202,
+  "lot_acres": 0.1,
+  "on_market": "2026-08-06T00:00:00.000Z",
+  "price_change": 0,
+  "hoa_monthly": 69,
+  "type": "Single Family Residence",
+  "garage_yn": null,
+  "lat": 46.98571,
+  "lon": -122.819194,
+  "hero": "https://bpp.mlsgrid.com/images/NWM161856314/e0c3dc69-e8f4-433a-979a-edda2a927a36.jpg",
+  "nwmls_url": "https://www.nwmls.com/homes-for-sale/98513",
+  "enrich_error": "HTTP 429 for https://www.zillow.com/homes/6951-Radius-Loop-SE%2C-Olympia%2C-WA-98513_rb/",
+  "slug": "6951-radius-loop-se-olympia-wa-98513",
+  "screen": {
+    "pass": true,
+    "checks": [
+      {
+        "name": "Listing price inside scenario band",
+        "state": "pass",
+        "value": 549000,
+        "rule": "$450,000 - $550,000"
+      },
+      {
+        "name": "Actively for sale",
+        "state": "pass",
+        "value": "Active",
+        "rule": "Active / coming soon"
+      },
+      {
+        "name": "Single-family residence",
+        "state": "pass",
+        "value": "Single Family Residence",
+        "rule": "Detached house (AFH occupancy)"
+      },
+      {
+        "name": "Bedrooms for the existing home",
+        "state": "pass",
+        "value": 3,
+        "rule": ">= 3 bd in main home"
+      },
+      {
+        "name": "Garage to convert",
+        "state": "unknown",
+        "value": "unknown",
+        "rule": ">= 400 sf garage (2 bedrooms needs ~500-689 sf, 3 needs ~690-736 sf)"
+      },
+      {
+        "name": "HOA carry",
+        "state": "pass",
+        "value": "$69/mo",
+        "rule": "<= $1,200/yr"
+      },
+      {
+        "name": "Public sewer",
+        "state": "unknown",
+        "value": "not stated",
+        "rule": "Public sewer preferred; septic needs health jurisdiction capacity sign-off"
+      },
+      {
+        "name": "County tax rate known",
+        "state": "unknown",
+        "value": "unknown",
+        "rule": "Thurston / Lewis levy table"
+      }
+    ],
+    "fails": [],
+    "unknowns": [
+      "Garage to convert",
+      "Public sewer",
+      "County tax rate known"
+    ],
+    "garage_beds": null
+  },
+  "last_result": {
+    "run_date": "2026-10-25",
+    "best_score": 4.051301906043728,
+    "verdict": "PASS",
+    "best_case": "At asking $549,000, best tested rent $6,000/mo -> score 4.1/10, $1,022/mo cash flow, IRR 3.9%",
+    "asking_score": 4.051301906043728,
+    "asking_verdict": "PASS",
+    "asking_case": {
+      "price": 549000,
+      "rent": 6000,
+      "score": 4.05,
+      "npv": 43475,
+      "irr": 3.91,
+      "cf_mo": 1022,
+      "roi_pct": 118.8
+    },
+    "grid_best_score": 6.168673067984748,
+    "grid_best_verdict": "MARGINAL",
+    "rent_needed_at_ask": 6875,
+    "max_price_at_top_rent": 440000,
+    "cash_needed": 238230,
+    "passing_combos": 0,
+    "top": [
+      {
+        "price": 450000,
+        "rent": 6000,
+        "score": 6.17,
+        "irr": 7.26,
+        "cf_mo": 1649
+      },
+      {
+        "price": 475000,
+        "rent": 6000,
+        "score": 5.53,
+        "irr": 6.32,
+        "cf_mo": 1491
+      },
+      {
+        "price": 500000,
+        "rent": 6000,
+        "score": 4.99,
+        "irr": 5.45,
+        "cf_mo": 1333
+      },
+      {
+        "price": 525000,
+        "rent": 6000,
+        "score": 4.54,
+        "irr": 4.64,
+        "cf_mo": 1174
+      },
+      {
+        "price": 450000,
+        "rent": 5375,
+        "score": 4.28,
+        "irr": 4.11,
+        "cf_mo": 1156
+      }
+    ]
+  }
+}

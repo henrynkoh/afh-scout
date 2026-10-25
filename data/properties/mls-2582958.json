@@ -1,0 +1,147 @@
+{
+  "source": "NWMLS",
+  "source_area": "98513",
+  "mls_id": "2582958",
+  "address": "8645 62nd Avenue SE, Olympia, WA 98513",
+  "street": "8645 62nd Avenue SE",
+  "city": "Olympia",
+  "state": "WA",
+  "zip": "98513",
+  "price": 519990,
+  "status": "Active",
+  "beds": 3,
+  "baths": 3,
+  "sqft": 1797,
+  "lot_acres": 0.09,
+  "on_market": "2026-09-18T00:00:00.000Z",
+  "price_change": -15000,
+  "hoa_monthly": 78,
+  "type": "Single Family Residence",
+  "garage_yn": null,
+  "lat": 46.99205,
+  "lon": -122.757171,
+  "hero": "https://bpp.mlsgrid.com/images/NWM162871643/5994b9f0-9b71-4345-8707-c0f5cee74760.jpg",
+  "nwmls_url": "https://www.nwmls.com/homes-for-sale/98513",
+  "enrich_error": "HTTP 429 for https://www.zillow.com/homes/8645-62nd-Avenue-SE%2C-Olympia%2C-WA-98513_rb/",
+  "slug": "8645-62nd-avenue-se-olympia-wa-98513",
+  "screen": {
+    "pass": true,
+    "checks": [
+      {
+        "name": "Listing price inside scenario band",
+        "state": "pass",
+        "value": 519990,
+        "rule": "$450,000 - $550,000"
+      },
+      {
+        "name": "Actively for sale",
+        "state": "pass",
+        "value": "Active",
+        "rule": "Active / coming soon"
+      },
+      {
+        "name": "Single-family residence",
+        "state": "pass",
+        "value": "Single Family Residence",
+        "rule": "Detached house (AFH occupancy)"
+      },
+      {
+        "name": "Bedrooms for the existing home",
+        "state": "pass",
+        "value": 3,
+        "rule": ">= 3 bd in main home"
+      },
+      {
+        "name": "Garage to convert",
+        "state": "unknown",
+        "value": "unknown",
+        "rule": ">= 400 sf garage (2 bedrooms needs ~500-689 sf, 3 needs ~690-736 sf)"
+      },
+      {
+        "name": "HOA carry",
+        "state": "pass",
+        "value": "$78/mo",
+        "rule": "<= $1,200/yr"
+      },
+      {
+        "name": "Public sewer",
+        "state": "unknown",
+        "value": "not stated",
+        "rule": "Public sewer preferred; septic needs health jurisdiction capacity sign-off"
+      },
+      {
+        "name": "County tax rate known",
+        "state": "unknown",
+        "value": "unknown",
+        "rule": "Thurston / Lewis levy table"
+      }
+    ],
+    "fails": [],
+    "unknowns": [
+      "Garage to convert",
+      "Public sewer",
+      "County tax rate known"
+    ],
+    "garage_beds": null
+  },
+  "last_result": {
+    "run_date": "2026-10-25",
+    "best_score": 4.599787825214577,
+    "verdict": "PASS",
+    "best_case": "At asking $519,990, best tested rent $6,000/mo -> score 4.6/10, $1,197/mo cash flow, IRR 4.7%",
+    "asking_score": 4.599787825214577,
+    "asking_verdict": "PASS",
+    "asking_case": {
+      "price": 519990,
+      "rent": 6000,
+      "score": 4.6,
+      "npv": 50949,
+      "irr": 4.74,
+      "cf_mo": 1197,
+      "roi_pct": 122.7
+    },
+    "grid_best_score": 6.129195176064714,
+    "grid_best_verdict": "MARGINAL",
+    "rent_needed_at_ask": 6650,
+    "max_price_at_top_rent": 435000,
+    "cash_needed": 230397,
+    "passing_combos": 0,
+    "top": [
+      {
+        "price": 450000,
+        "rent": 6000,
+        "score": 6.13,
+        "irr": 7.2,
+        "cf_mo": 1640
+      },
+      {
+        "price": 475000,
+        "rent": 6000,
+        "score": 5.49,
+        "irr": 6.26,
+        "cf_mo": 1482
+      },
+      {
+        "price": 500000,
+        "rent": 6000,
+        "score": 4.96,
+        "irr": 5.39,
+        "cf_mo": 1324
+      },
+      {
+        "price": 525000,
+        "rent": 6000,
+        "score": 4.51,
+        "irr": 4.58,
+        "cf_mo": 1165
+      },
+      {
+        "price": 450000,
+        "rent": 5375,
+        "score": 4.25,
+        "irr": 4.05,
+        "cf_mo": 1147
+      }
+    ]
+  }
+}

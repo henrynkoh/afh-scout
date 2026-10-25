@@ -1,0 +1,147 @@
+{
+  "source": "NWMLS",
+  "source_area": "98516",
+  "mls_id": "2591324",
+  "address": "7108 Raptor Ave NE, Lacey, WA 98516",
+  "street": "7108 Raptor Ave NE",
+  "city": "Lacey",
+  "state": "WA",
+  "zip": "98516",
+  "price": 539950,
+  "status": "Active",
+  "beds": 4,
+  "baths": 3,
+  "sqft": 2303,
+  "lot_acres": 0.1,
+  "on_market": "2026-10-07T00:00:00.000Z",
+  "price_change": 0,
+  "hoa_monthly": 66.49,
+  "type": "Single Family Residence",
+  "garage_yn": null,
+  "lat": 47.079202,
+  "lon": -122.785098,
+  "hero": "https://bpp.mlsgrid.com/images/NWM163388246/653d814d-42e7-4bcc-a419-4a5bfc7110fe.jpg",
+  "nwmls_url": "https://www.nwmls.com/homes-for-sale/98516",
+  "enrich_error": "HTTP 429 for https://www.zillow.com/homes/7108-Raptor-Ave-NE%2C-Lacey%2C-WA-98516_rb/",
+  "slug": "7108-raptor-ave-ne-lacey-wa-98516",
+  "screen": {
+    "pass": true,
+    "checks": [
+      {
+        "name": "Listing price inside scenario band",
+        "state": "pass",
+        "value": 539950,
+        "rule": "$450,000 - $550,000"
+      },
+      {
+        "name": "Actively for sale",
+        "state": "pass",
+        "value": "Active",
+        "rule": "Active / coming soon"
+      },
+      {
+        "name": "Single-family residence",
+        "state": "pass",
+        "value": "Single Family Residence",
+        "rule": "Detached house (AFH occupancy)"
+      },
+      {
+        "name": "Bedrooms for the existing home",
+        "state": "pass",
+        "value": 4,
+        "rule": ">= 3 bd in main home"
+      },
+      {
+        "name": "Garage to convert",
+        "state": "unknown",
+        "value": "unknown",
+        "rule": ">= 400 sf garage (2 bedrooms needs ~500-689 sf, 3 needs ~690-736 sf)"
+      },
+      {
+        "name": "HOA carry",
+        "state": "pass",
+        "value": "$66.49/mo",
+        "rule": "<= $1,200/yr"
+      },
+      {
+        "name": "Public sewer",
+        "state": "unknown",
+        "value": "not stated",
+        "rule": "Public sewer preferred; septic needs health jurisdiction capacity sign-off"
+      },
+      {
+        "name": "County tax rate known",
+        "state": "unknown",
+        "value": "unknown",
+        "rule": "Thurston / Lewis levy table"
+      }
+    ],
+    "fails": [],
+    "unknowns": [
+      "Garage to convert",
+      "Public sewer",
+      "County tax rate known"
+    ],
+    "garage_beds": null
+  },
+  "last_result": {
+    "run_date": "2026-10-25",
+    "best_score": 4.248888658449864,
+    "verdict": "PASS",
+    "best_case": "At asking $539,950, best tested rent $6,000/mo -> score 4.2/10, $1,082/mo cash flow, IRR 4.2%",
+    "asking_score": 4.248888658449864,
+    "asking_verdict": "PASS",
+    "asking_case": {
+      "price": 539950,
+      "rent": 6000,
+      "score": 4.25,
+      "npv": 46145,
+      "irr": 4.19,
+      "cf_mo": 1082,
+      "roi_pct": 120.1
+    },
+    "grid_best_score": 6.179702855020632,
+    "grid_best_verdict": "MARGINAL",
+    "rent_needed_at_ask": 6800,
+    "max_price_at_top_rent": 440000,
+    "cash_needed": 235787,
+    "passing_combos": 0,
+    "top": [
+      {
+        "price": 450000,
+        "rent": 6000,
+        "score": 6.18,
+        "irr": 7.27,
+        "cf_mo": 1652
+      },
+      {
+        "price": 475000,
+        "rent": 6000,
+        "score": 5.54,
+        "irr": 6.33,
+        "cf_mo": 1494
+      },
+      {
+        "price": 500000,
+        "rent": 6000,
+        "score": 5,
+        "irr": 5.46,
+        "cf_mo": 1335
+      },
+      {
+        "price": 525000,
+        "rent": 6000,
+        "score": 4.55,
+        "irr": 4.65,
+        "cf_mo": 1177
+      },
+      {
+        "price": 450000,
+        "rent": 5375,
+        "score": 4.29,
+        "irr": 4.12,
+        "cf_mo": 1158
+      }
+    ]
+  }
+}

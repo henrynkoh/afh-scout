@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AFH feasibility - 8437 Ostrom Ave SE # 85, Lacey, WA 98513</title>
+<style>
+:root{--ink:#16181d;--mut:#6b7280;--line:#e5e7eb;--bg:#fbfbfd;--card:#fff}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}
+.wrap{max-width:1160px;margin:0 auto;padding:28px 22px 80px}
+h1{font-size:26px;margin:0 0 4px}h2{font-size:18px;margin:34px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+.sub{color:var(--mut);font-size:13px;margin-bottom:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:12px 0}
+.kv{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px}
+.kv div span{display:block;color:var(--mut);font-size:12px}
+.kv div b{font-size:17px}
+table{width:100%;border-collapse:collapse;font-size:13.5px;background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:#f4f5f8;font-size:12px;text-transform:uppercase;letter-spacing:.03em;color:#444}
+.t{color:var(--mut);font-size:12px}
+.pos{color:#1f7a4d;font-weight:600}.neg{color:#a33;font-weight:600}
+.ok{color:#1f7a4d;font-weight:700}.bad{color:#a33;font-weight:700}.warn{color:#b8860b;font-weight:700}
+.rk{font-weight:700;color:var(--mut)}
+.score{color:#fff;font-weight:700;text-align:center}
+.ev{min-width:260px}
+.heat td,.heat th{text-align:center;padding:10px 6px}
+#h{height:200px}
+ul.acts li{margin:6px 0}
+.foot{margin-top:36px;color:var(--mut);font-size:12px;border-top:1px solid var(--line);padding-top:12px}
+a{color:#2563eb}
+</style></head><body><div class="wrap">
+<h1>8437 Ostrom Ave SE # 85, Lacey, WA 98513</h1>
+<div class="sub">AFH conversion feasibility · run 2026-10-25 · NWMLS · NWMLS #2586643 · </div>
+
+<div class="card kv">
+  <div><span>List price</span><b>$469,995</b></div>
+  <div><span>Beds / baths / sqft</span><b>3 / 3 / 1395</b></div>
+  <div><span>County</span><b>unknown</b></div>
+  <div><span>Garage</span><b>no/unknown</b></div>
+  <div><span>All-in basis</span><b>$559,995</b></div>
+  <div><span>Cash needed</span><b>$216,899</b></div>
+  <div><span>Asking-price score</span><b>5.5/10 · MARGINAL</b></div>
+  <div><span>Best grid score</span><b>6.0/10 · MARGINAL</b></div>
+</div>
+
+<h2>1. All-in basis (the filter formula)</h2>
+<table><thead><tr><th>Line</th><th>Amount</th></tr></thead><tbody>
+<tr><td>Purchase price</td><td>$469,995</td></tr><tr><td>Holding cost (6 mo: mortgage + tax + insurance + HOA)</td><td>$20,000</td></tr><tr><td>Remodel for AFH conversion</td><td>$60,000</td></tr><tr><td>Extra / contingency</td><td>$10,000</td></tr><tr><td>All-in basis</td><td>$559,995</td></tr>
+<tr><td>Cash at risk (25% down + 2% closing + holding + remodel + contingency)</td><td><b>$216,899</b></td></tr>
+</tbody></table>
+
+<h2>2. Filter gate</h2>
+<table><thead><tr><th>Filter</th><th>Result</th><th>Value</th><th>Rule</th></tr></thead><tbody><tr><td>Listing price inside scenario band</td><td class="ok">PASS</td><td>469995</td><td class="t">$450,000 - $550,000</td></tr><tr><td>Actively for sale</td><td class="ok">PASS</td><td>Active</td><td class="t">Active / coming soon</td></tr><tr><td>Single-family residence</td><td class="ok">PASS</td><td>Single Family Residence</td><td class="t">Detached house (AFH occupancy)</td></tr><tr><td>Bedrooms for the existing home</td><td class="ok">PASS</td><td>3</td><td class="t">>= 3 bd in main home</td></tr><tr><td>Garage to convert</td><td class="warn">UNKNOWN</td><td>unknown</td><td class="t">>= 400 sf garage (2 bedrooms needs ~500-689 sf, 3 needs ~690-736 sf)</td></tr><tr><td>HOA carry</td><td class="ok">PASS</td><td>$97/mo</td><td class="t"><= $1,200/yr</td></tr><tr><td>Public sewer</td><td class="warn">UNKNOWN</td><td>not stated</td><td class="t">Public sewer preferred; septic needs health jurisdiction capacity sign-off</td></tr><tr><td>County tax rate known</td><td class="warn">UNKNOWN</td><td>unknown</td><td class="t">Thurston / Lewis levy table</td></tr></tbody></table>
+<p class="sub">Gate result: <b>PASS - worth a feasibility run</b> · 3 item(s) to confirm</p>
+
+<h2>3. Asking-price decision</h2>
+<table><thead><tr><th>Ask</th><th>Best tested rent</th><th>Cash flow /mo</th><th>NPV</th><th>IRR</th><th>Operational payback</th><th>ROI</th><th>Score</th><th>Verdict</th></tr></thead><tbody><tr><td>$469,995</td><td>$6,000/mo</td><td class="pos">$1,495</td><td>$63,607</td><td>6.3%</td><td>&gt;5 years (exit)</td><td>130%</td><td class="score" style="background:#d9a422">5.5</td><td><b>MARGINAL</b></td></tr></tbody></table>
+<p class="sub">$6,300/mo rent is required at asking · $435,000 maximum purchase at $6,000/mo rent.</p>
+
+<h2>4. Top 5 scenario combinations</h2>
+<div class="card"><svg viewBox="0 0 640 220" width="100%" role="img"><rect x="34.0" y="30.0" width="100.4" height="150.0" fill="#b8860b" rx="3"></rect>
+      <text x="84.2" y="24.0" text-anchor="middle" font-size="12" fill="#333">6.0</text>
+      <text x="84.2" y="198" text-anchor="middle" font-size="11" fill="#555">450,000/6,000</text><rect x="148.4" y="45.8" width="100.4" height="134.2" fill="#b8860b" rx="3"></rect>
+      <text x="198.6" y="39.8" text-anchor="middle" font-size="12" fill="#333">5.4</text>
+      <text x="198.6" y="198" text-anchor="middle" font-size="11" fill="#555">475,000/6,000</text><rect x="262.8" y="58.4" width="100.4" height="121.6" fill="#a33" rx="3"></rect>
+      <text x="313.0" y="52.4" text-anchor="middle" font-size="12" fill="#333">4.9</text>
+      <text x="313.0" y="198" text-anchor="middle" font-size="11" fill="#555">500,000/6,000</text><rect x="377.2" y="69.7" width="100.4" height="110.3" fill="#a33" rx="3"></rect>
+      <text x="427.4" y="63.7" text-anchor="middle" font-size="12" fill="#333">4.4</text>
+      <text x="427.4" y="198" text-anchor="middle" font-size="11" fill="#555">525,000/6,000</text><rect x="491.6" y="76.1" width="100.4" height="103.9" fill="#a33" rx="3"></rect>
+      <text x="541.8" y="70.1" text-anchor="middle" font-size="12" fill="#333">4.2</text>
+      <text x="541.8" y="198" text-anchor="middle" font-size="11" fill="#555">450,000/5,375</text></svg></div>
+<table><thead><tr><th>#</th><th>Scenario</th><th>Cash flow /mo</th><th>NPV @10%</th><th>IRR</th><th>Payback yr</th><th>ROI 5yr</th><th>Score</th><th>Judgement</th><th>Reason and evidence</th></tr></thead><tbody><tr>
+    <td class="rk">1</td>
+    <td><b>$450,000</b><br><span class="t">rent $6,000/mo</span></td>
+    <td class="pos">$1,621</td>
+    <td>$69,152</td>
+    <td>7.1%</td>
+    <td>&gt;5 (exit)</td>
+    <td>133%</td>
+    <td class="score" style="background:#d9a422">6.0</td>
+    <td><b>MARGINAL</b></td>
+    <td class="ev">+$1,621/mo after debt · DSCR 1.65 · IRR 7.1% · no operational payback inside 5yr (equity returns at sale, yr 5) · ROI 133% · rent vs breakeven $3,948 (x1.52) · score adjustment: IRR 7.1% is 2.9 pt under the 10% hurdle (-18% on the score)<br><span class="t">weakest link: return (IRR) (4.1/10)</span></td>
+  </tr><tr>
+    <td class="rk">2</td>
+    <td><b>$475,000</b><br><span class="t">rent $6,000/mo</span></td>
+    <td class="pos">$1,463</td>
+    <td>$62,219</td>
+    <td>6.1%</td>
+    <td>&gt;5 (exit)</td>
+    <td>129%</td>
+    <td class="score" style="background:#d9a422">5.4</td>
+    <td><b>MARGINAL</b></td>
+    <td class="ev">+$1,463/mo after debt · DSCR 1.56 · IRR 6.1% · no operational payback inside 5yr (equity returns at sale, yr 5) · ROI 129% · rent vs breakeven $4,148 (x1.45) · score adjustment: IRR 6.1% is 3.9 pt under the 10% hurdle (-23% on the score)<br><span class="t">weakest link: return (IRR) (3.1/10)</span></td>
+  </tr><tr>
+    <td class="rk">3</td>
+    <td><b>$500,000</b><br><span class="t">rent $6,000/mo</span></td>
+    <td class="pos">$1,305</td>
+    <td>$55,286</td>
+    <td>5.3%</td>
+    <td>&gt;5 (exit)</td>
+    <td>125%</td>
+    <td class="score" style="background:#a33">4.9</td>
+    <td><b>PASS</b></td>
+    <td class="ev">+$1,305/mo after debt · DSCR 1.47 · IRR 5.3% · no operational payback inside 5yr (equity returns at sale, yr 5) · ROI 125% · rent vs breakeven $4,348 (x1.38) · score adjustment: IRR 5.3% is 4.7 pt under the 10% hurdle (-28% on the score)<br><span class="t">weakest link: return (IRR) (2.7/10)</span></td>
+  </tr><tr>
+    <td class="rk">4</td>
+    <td><b>$525,000</b><br><span class="t">rent $6,000/mo</span></td>
+    <td class="pos">$1,146</td>
+    <td>$48,353</td>
+    <td>4.5%</td>
+    <td>&gt;5 (exit)</td>
+    <td>121%</td>
+    <td class="score" style="background:#a33">4.4</td>
+    <td><b>PASS</b></td>
+    <td class="ev">+$1,146/mo after debt · DSCR 1.39 · IRR 4.5% · no operational payback inside 5yr (equity returns at sale, yr 5) · ROI 121% · rent vs breakeven $4,549 (x1.32) · score adjustment: IRR 4.5% is 5.5 pt under the 10% hurdle (-33% on the score)<br><span class="t">weakest link: return (IRR) (2.4/10)</span></td>
+  </tr><tr>
+    <td class="rk">5</td>
+    <td><b>$450,000</b><br><span class="t">rent $5,375/mo</span></td>
+    <td class="pos">$1,128</td>
+    <td>$37,791</td>
+    <td>3.9%</td>
+    <td>&gt;5 (exit)</td>
+    <td>118%</td>
+    <td class="score" style="background:#a33">4.2</td>
+    <td><b>PASS</b></td>
+    <td class="ev">+$1,128/mo after debt · DSCR 1.45 · IRR 3.9% · no operational payback inside 5yr (equity returns at sale, yr 5) · ROI 118% · rent vs breakeven $3,948 (x1.36) · score adjustment: IRR 3.9% is 6.1 pt under the 10% hurdle (-36% on the score)<br><span class="t">weakest link: return (IRR) (2.1/10)</span></td>
+  </tr></tbody></table>
+
+<h2>5. Rent reality check</h2>
+<table><thead><tr><th>Basis</th><th>Value</th><th>Note</th></tr></thead><tbody>
+<tr><td>AFH-ready whole-home lease (the grid axis)</td><td>rents $3,500-$6,000/mo</td><td class="t">Premium is earned by licensed capacity and an already-converted home</td></tr><tr><td>AFH operator model (per resident)</td><td>not modelled in this run</td><td class="t">Revenue = residents x rate x occupancy; a separate run</td></tr>
+</tbody></table>
+
+<h2>6. Full 25-combination grid</h2>
+<table class="heat"><thead><tr><th>Price \ Rent</th><th>$3,500/mo</th><th>$4,125/mo</th><th>$4,750/mo</th><th>$5,375/mo</th><th>$6,000/mo</th></tr></thead><tbody><tr><th>$450,000</th><td style="background:#a33;color:#fff"><b>0.6</b><br><span class="t">IRR -6%</span></td><td style="background:#a33;color:#fff"><b>1.5</b><br><span class="t">IRR -2%</span></td><td style="background:#d97b2b;color:#fff"><b>3.0</b><br><span class="t">IRR 1%</span></td><td style="background:#d97b2b;color:#fff"><b>4.2</b><br><span class="t">IRR 4%</span></td><td style="background:#d9a422;color:#fff"><b>6.0</b><br><span class="t">IRR 7%</span></td></tr><tr><th>$475,000</th><td style="background:#a33;color:#fff"><b>0.5</b><br><span class="t">IRR -6%</span></td><td style="background:#a33;color:#fff"><b>1.2</b><br><span class="t">IRR -3%</span></td><td style="background:#a33;color:#fff"><b>2.5</b><br><span class="t">IRR 0%</span></td><td style="background:#d97b2b;color:#fff"><b>3.7</b><br><span class="t">IRR 3%</span></td><td style="background:#d9a422;color:#fff"><b>5.4</b><br><span class="t">IRR 6%</span></td></tr><tr><th>$500,000</th><td style="background:#a33;color:#fff"><b>0.4</b><br><span class="t">IRR -7%</span></td><td style="background:#a33;color:#fff"><b>0.9</b><br><span class="t">IRR -4%</span></td><td style="background:#a33;color:#fff"><b>1.8</b><br><span class="t">IRR -1%</span></td><td style="background:#d97b2b;color:#fff"><b>3.3</b><br><span class="t">IRR 2%</span></td><td style="background:#d97b2b;color:#fff"><b>4.9</b><br><span class="t">IRR 5%</span></td></tr><tr><th>$525,000</th><td style="background:#a33;color:#fff"><b>0.4</b><br><span class="t">IRR -7%</span></td><td style="background:#a33;color:#fff"><b>0.7</b><br><span class="t">IRR -4%</span></td><td style="background:#a33;color:#fff"><b>1.5</b><br><span class="t">IRR -1%</span></td><td style="background:#d97b2b;color:#fff"><b>3.0</b><br><span class="t">IRR 2%</span></td><td style="background:#d97b2b;color:#fff"><b>4.4</b><br><span class="t">IRR 4%</span></td></tr><tr><th>$550,000</th><td style="background:#a33;color:#fff"><b>0.4</b><br><span class="t">IRR -7%</span></td><td style="background:#a33;color:#fff"><b>0.5</b><br><span class="t">IRR -5%</span></td><td style="background:#a33;color:#fff"><b>1.3</b><br><span class="t">IRR -2%</span></td><td style="background:#a33;color:#fff"><b>2.7</b><br><span class="t">IRR 1%</span></td><td style="background:#d97b2b;color:#fff"><b>3.9</b><br><span class="t">IRR 4%</span></td></tr></tbody></table>
+<p class="sub">Green 6.5+ = invest, blue 6.5+ = conditional, amber 5+ = marginal, red = pass.</p>
+
+<h2>7. WABO / AFH inspection gate</h2>
+<table><thead><tr><th>Item</th><th>What it takes</th><th>Status</th></tr></thead><tbody><tr><td>Structural: garage slab and header capacity for habitable rooms</td><td class="t">Engineer letter or prescriptive check; garage floors sit ~4in below finish floor</td><td class="warn">Open</td></tr><tr><td>Egress: every AFH sleeping room needs an emergency escape window (5.7 sf clear, 24in high, 20in wide, sill <= 44in)</td><td class="t">New sliders into the converted garage</td><td class="warn">Open</td></tr><tr><td>Ceiling height >= 7ft in the conversion and hallway</td><td class="t">Verify joist depth over the garage</td><td class="warn">Open</td></tr><tr><td>Smoke / CO alarms per IRC R314/R315 plus WAC 388-76</td><td class="t">Interconnected, photoelectric; LS-01 sheet</td><td class="warn">Open</td></tr><tr><td>WSEC energy: envelope, insulation, glazing (U-factor)</td><td class="t">Conversion wall/ceiling R-values and window U</td><td class="warn">Open</td></tr><tr><td>Heating and ventilation sized for the added rooms</td><td class="t">Manual J or equipment cut sheet</td><td class="warn">Open</td></tr><tr><td>Plumbing fixture count and water heater location / seismic strapping</td><td class="t">If bath added in the garage</td><td class="warn">Open</td></tr><tr><td>Site: parking count, driveway turn-around, setbacks</td><td class="t">AFH parking + survey coverage</td><td class="warn">Open</td></tr><tr><td>Septic capacity if not on public sewer (150 gal/day per bedroom, WA OSS)</td><td class="t">Health jurisdiction sign-off, not just the building department</td><td class="warn">Open</td></tr><tr><td>DSHS licensing (WAC 388-76) reviews the WHOLE home, not just the conversion</td><td class="t">Pre-licensing walkthrough before purchase</td><td class="warn">Open</td></tr><tr><td>Zoning / land use allows an adult family home at this density</td><td class="t">City or county planning confirmation</td><td class="warn">Open</td></tr><tr><td>Utility capacity: electrical service, panel space for the added circuits</td><td class="t">Panel photo at inspection</td><td class="warn">Open</td></tr></tbody></table>
+
+<h2>8. Judgement and next actions</h2>
+<div class="card"><ul class="acts"><li>No combination in the 5x5 grid clears 6.5/10 at today's factors. Best in-band result is 6.0/10 (MARGINAL).</li><li>At the asking price of $469,995 the lease must be $6,300/mo to reach 6.5/10 (the grid tops out at $6,000).</li><li>Holding rent at $6,000/mo, the purchase has to be $435,000 or lower. That is the offer number, not the asking price.</li><li>A cut of $34,995 is worth $222/mo of cash flow and 1.3 points of IRR versus the asking price.</li><li>Before an offer: sewer/septic letter, garage slab and header check, and a DSHS pre-licensing walkthrough. Those three decide whether the $60,000 remodel is real.</li><li>After an offer: the WABO plan review package (site plan, structural, energy, smoke/CO, mechanical) can be generated from the houseBIM toolchain so the conversion does not stall at inspection.</li><li>Rent basis to confirm: the grid tests an AFH-ready whole-home lease. A plain family rental sits lower - see the rent reality section before trusting the high-rent rows.</li></ul></div>
+
+<h2>9. Market factors and sources</h2>
+<table><thead><tr><th>Factor</th><th>Value</th><th>Source</th></tr></thead><tbody>
+<tr><td>Mortgage rate (30-yr FRM)</td><td>7.32% + 0.75 pt investor spread</td><td class="t">Freddie Mac PMMS 2026-10-22 (7.32%) + 0.75pt investor spread</td></tr><tr><td>Property tax</td><td>0.95% of price (county table)</td><td class="t">WA DOR 2026 effective levy, county average</td></tr><tr><td>Insurance</td><td>$1,800/yr + 15% AFH uplift</td><td class="t">WA landlord policy avg 2026, +15% AFH liability uplift</td></tr><tr><td>Vacancy / management / maintenance</td><td>5% / 8% / 8%</td><td class="t">Market operating norms</td></tr><tr><td>Appreciation / selling cost</td><td>3% / 6%</td><td class="t">Hold assumption</td></tr><tr><td>Discount rate for NPV</td><td>10%</td><td class="t">Hurdle rate</td></tr><tr><td>Financing</td><td>25% down, 30-yr amortisation, 5-yr hold</td><td class="t">Investor loan market</td></tr>
+</tbody></table>
+
+<div class="foot">Generated by afh-scout · metrics on cash at risk · IRR includes exit at 3%/yr appreciation with 6% selling cost · not an appraisal, not tax or legal advice.</div>
+</div></body></html>

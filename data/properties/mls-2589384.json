@@ -1,0 +1,148 @@
+{
+  "source": "NWMLS",
+  "source_area": "98516",
+  "mls_id": "2589384",
+  "address": "5171 Emily Way NE #6, Lacey, WA 98516",
+  "street": "5171 Emily Way NE #6",
+  "city": "Lacey",
+  "state": "WA",
+  "zip": "98516",
+  "price": 499995,
+  "status": "Active",
+  "beds": 4,
+  "baths": 3,
+  "sqft": 1725,
+  "lot_acres": 0.08,
+  "on_market": "2026-09-30T00:00:00.000Z",
+  "price_change": -33000,
+  "hoa_monthly": 105,
+  "type": "Single Family Residence",
+  "garage_yn": null,
+  "lat": 47.095909,
+  "lon": -122.783369,
+  "hero": "https://bpp.mlsgrid.com/images/NWM163265416/693ed008-f31f-493e-8b35-b38932a2b76c.jpg",
+  "nwmls_url": "https://www.nwmls.com/homes-for-sale/98516",
+  "enrich_error": "HTTP 429 for https://www.zillow.com/homes/5171-Emily-Way-NE-6%2C-Lacey%2C-WA-98516_rb/",
+  "slug": "5171-emily-way-ne-6-lacey-wa-98516",
+  "screen": {
+    "pass": true,
+    "checks": [
+      {
+        "name": "Listing price inside scenario band",
+        "state": "pass",
+        "value": 499995,
+        "rule": "$450,000 - $550,000"
+      },
+      {
+        "name": "Actively for sale",
+        "state": "pass",
+        "value": "Active",
+        "rule": "Active / coming soon"
+      },
+      {
+        "name": "Single-family residence",
+        "state": "pass",
+        "value": "Single Family Residence",
+        "rule": "Detached house (AFH occupancy)"
+      },
+      {
+        "name": "Bedrooms for the existing home",
+        "state": "pass",
+        "value": 4,
+        "rule": ">= 3 bd in main home"
+      },
+      {
+        "name": "Garage to convert",
+        "state": "unknown",
+        "value": "unknown",
+        "rule": ">= 400 sf garage (2 bedrooms needs ~500-689 sf, 3 needs ~690-736 sf)"
+      },
+      {
+        "name": "HOA carry",
+        "state": "unknown",
+        "value": "$105/mo",
+        "rule": "<= $1,200/yr"
+      },
+      {
+        "name": "Public sewer",
+        "state": "unknown",
+        "value": "not stated",
+        "rule": "Public sewer preferred; septic needs health jurisdiction capacity sign-off"
+      },
+      {
+        "name": "County tax rate known",
+        "state": "unknown",
+        "value": "unknown",
+        "rule": "Thurston / Lewis levy table"
+      }
+    ],
+    "fails": [],
+    "unknowns": [
+      "Garage to convert",
+      "HOA carry",
+      "Public sewer",
+      "County tax rate known"
+    ],
+    "garage_beds": null
+  },
+  "last_result": {
+    "run_date": "2026-10-25",
+    "best_score": 4.8738268459442455,
+    "verdict": "PASS",
+    "best_case": "At asking $499,995, best tested rent $6,000/mo -> score 4.9/10, $1,297/mo cash flow, IRR 5.2%",
+    "asking_score": 4.8738268459442455,
+    "asking_verdict": "PASS",
+    "asking_case": {
+      "price": 499995,
+      "rent": 6000,
+      "score": 4.87,
+      "npv": 54779,
+      "irr": 5.24,
+      "cf_mo": 1297,
+      "roi_pct": 124.9
+    },
+    "grid_best_score": 6.011429412762256,
+    "grid_best_verdict": "MARGINAL",
+    "rent_needed_at_ask": 6525,
+    "max_price_at_top_rent": 430000,
+    "cash_needed": 224999,
+    "passing_combos": 0,
+    "top": [
+      {
+        "price": 450000,
+        "rent": 6000,
+        "score": 6.01,
+        "irr": 7.03,
+        "cf_mo": 1613
+      },
+      {
+        "price": 475000,
+        "rent": 6000,
+        "score": 5.38,
+        "irr": 6.1,
+        "cf_mo": 1455
+      },
+      {
+        "price": 500000,
+        "rent": 6000,
+        "score": 4.87,
+        "irr": 5.23,
+        "cf_mo": 1297
+      },
+      {
+        "price": 525000,
+        "rent": 6000,
+        "score": 4.42,
+        "irr": 4.43,
+        "cf_mo": 1138
+      },
+      {
+        "price": 450000,
+        "rent": 5375,
+        "score": 4.16,
+        "irr": 3.88,
+        "cf_mo": 1120
+      }
+    ]
+  }
+}

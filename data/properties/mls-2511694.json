@@ -1,0 +1,88 @@
+{
+  "source": "NWMLS",
+  "source_area": "98513",
+  "mls_id": "2511694",
+  "address": "8707 62nd Ct SE, Olympia, WA 98513",
+  "street": "8707 62nd Ct SE",
+  "city": "Olympia",
+  "state": "WA",
+  "zip": "98513",
+  "price": 574990,
+  "status": "Active",
+  "beds": 5,
+  "baths": 3,
+  "sqft": 2745,
+  "lot_acres": 0.09,
+  "on_market": "2026-04-24T00:00:00.000Z",
+  "price_change": -50000,
+  "hoa_monthly": 78,
+  "type": "Single Family Residence",
+  "garage_yn": null,
+  "lat": 46.991615,
+  "lon": -122.75621,
+  "hero": "https://bpp.mlsgrid.com/images/NWM158678728/e0c9038f-e9cf-4539-9772-16df66949a3e.jpg",
+  "nwmls_url": "https://www.nwmls.com/homes-for-sale/98513",
+  "enrich_error": "HTTP 403 for https://www.zillow.com/homes/8707-62nd-Ct-SE%2C-Olympia%2C-WA-98513_rb/",
+  "screen": {
+    "pass": false,
+    "checks": [
+      {
+        "name": "Listing price inside scenario band",
+        "state": "fail",
+        "value": 574990,
+        "rule": "$450,000 - $550,000"
+      },
+      {
+        "name": "Actively for sale",
+        "state": "pass",
+        "value": "Active",
+        "rule": "Active / coming soon"
+      },
+      {
+        "name": "Single-family residence",
+        "state": "pass",
+        "value": "Single Family Residence",
+        "rule": "Detached house (AFH occupancy)"
+      },
+      {
+        "name": "Bedrooms for the existing home",
+        "state": "pass",
+        "value": 5,
+        "rule": ">= 3 bd in main home"
+      },
+      {
+        "name": "Garage to convert",
+        "state": "unknown",
+        "value": "unknown",
+        "rule": ">= 400 sf garage (2 bedrooms needs ~500-689 sf, 3 needs ~690-736 sf)"
+      },
+      {
+        "name": "HOA carry",
+        "state": "pass",
+        "value": "$78/mo",
+        "rule": "<= $1,200/yr"
+      },
+      {
+        "name": "Public sewer",
+        "state": "unknown",
+        "value": "not stated",
+        "rule": "Public sewer preferred; septic needs health jurisdiction capacity sign-off"
+      },
+      {
+        "name": "County tax rate known",
+        "state": "unknown",
+        "value": "unknown",
+        "rule": "Thurston / Lewis levy table"
+      }
+    ],
+    "fails": [
+      "Listing price inside scenario band"
+    ],
+    "unknowns": [
+      "Garage to convert",
+      "Public sewer",
+      "County tax rate known"
+    ],
+    "garage_beds": null
+  }
+}

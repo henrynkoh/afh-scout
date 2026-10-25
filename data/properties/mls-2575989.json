@@ -1,0 +1,89 @@
+{
+  "source": "NWMLS",
+  "source_area": "98516",
+  "mls_id": "2575989",
+  "address": "1562 Fiona St NE # 61, Lacey, WA 98516",
+  "street": "1562 Fiona St NE # 61",
+  "city": "Lacey",
+  "state": "WA",
+  "zip": "98516",
+  "price": 569995,
+  "status": "Active",
+  "beds": 4,
+  "baths": 3,
+  "sqft": 2251,
+  "lot_acres": 0.09,
+  "on_market": "2026-08-30T00:00:00.000Z",
+  "price_change": -50000,
+  "hoa_monthly": 105,
+  "type": "Single Family Residence",
+  "garage_yn": null,
+  "lat": 47.059255,
+  "lon": -122.816104,
+  "hero": "https://bpp.mlsgrid.com/images/NWM162469989/3404021d-a444-4ef8-85ce-ef18bbd0cbf2.jpg",
+  "nwmls_url": "https://www.nwmls.com/homes-for-sale/98516",
+  "enrich_error": "HTTP 429 for https://www.zillow.com/homes/1562-Fiona-St-NE-61%2C-Lacey%2C-WA-98516_rb/",
+  "screen": {
+    "pass": false,
+    "checks": [
+      {
+        "name": "Listing price inside scenario band",
+        "state": "fail",
+        "value": 569995,
+        "rule": "$450,000 - $550,000"
+      },
+      {
+        "name": "Actively for sale",
+        "state": "pass",
+        "value": "Active",
+        "rule": "Active / coming soon"
+      },
+      {
+        "name": "Single-family residence",
+        "state": "pass",
+        "value": "Single Family Residence",
+        "rule": "Detached house (AFH occupancy)"
+      },
+      {
+        "name": "Bedrooms for the existing home",
+        "state": "pass",
+        "value": 4,
+        "rule": ">= 3 bd in main home"
+      },
+      {
+        "name": "Garage to convert",
+        "state": "unknown",
+        "value": "unknown",
+        "rule": ">= 400 sf garage (2 bedrooms needs ~500-689 sf, 3 needs ~690-736 sf)"
+      },
+      {
+        "name": "HOA carry",
+        "state": "unknown",
+        "value": "$105/mo",
+        "rule": "<= $1,200/yr"
+      },
+      {
+        "name": "Public sewer",
+        "state": "unknown",
+        "value": "not stated",
+        "rule": "Public sewer preferred; septic needs health jurisdiction capacity sign-off"
+      },
+      {
+        "name": "County tax rate known",
+        "state": "unknown",
+        "value": "unknown",
+        "rule": "Thurston / Lewis levy table"
+      }
+    ],
+    "fails": [
+      "Listing price inside scenario band"
+    ],
+    "unknowns": [
+      "Garage to convert",
+      "HOA carry",
+      "Public sewer",
+      "County tax rate known"
+    ],
+    "garage_beds": null
+  }
+}

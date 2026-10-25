@@ -1,0 +1,147 @@
+{
+  "source": "NWMLS",
+  "source_area": "98513",
+  "mls_id": "2586643",
+  "address": "8437 Ostrom Ave SE # 85, Lacey, WA 98513",
+  "street": "8437 Ostrom Ave SE # 85",
+  "city": "Lacey",
+  "state": "WA",
+  "zip": "98513",
+  "price": 469995,
+  "status": "Active",
+  "beds": 3,
+  "baths": 3,
+  "sqft": 1395,
+  "lot_acres": 0.06,
+  "on_market": "2026-09-23T00:00:00.000Z",
+  "price_change": -10000,
+  "hoa_monthly": 97,
+  "type": "Single Family Residence",
+  "garage_yn": null,
+  "lat": 47.048435,
+  "lon": -122.760845,
+  "hero": "https://bpp.mlsgrid.com/images/NWM163099995/c2c580e1-5e8d-4131-bdbe-6dce572b5a41.jpg",
+  "nwmls_url": "https://www.nwmls.com/homes-for-sale/98513",
+  "enrich_error": "HTTP 429 for https://www.zillow.com/homes/8437-Ostrom-Ave-SE-85%2C-Lacey%2C-WA-98513_rb/",
+  "slug": "8437-ostrom-ave-se-85-lacey-wa-98513",
+  "screen": {
+    "pass": true,
+    "checks": [
+      {
+        "name": "Listing price inside scenario band",
+        "state": "pass",
+        "value": 469995,
+        "rule": "$450,000 - $550,000"
+      },
+      {
+        "name": "Actively for sale",
+        "state": "pass",
+        "value": "Active",
+        "rule": "Active / coming soon"
+      },
+      {
+        "name": "Single-family residence",
+        "state": "pass",
+        "value": "Single Family Residence",
+        "rule": "Detached house (AFH occupancy)"
+      },
+      {
+        "name": "Bedrooms for the existing home",
+        "state": "pass",
+        "value": 3,
+        "rule": ">= 3 bd in main home"
+      },
+      {
+        "name": "Garage to convert",
+        "state": "unknown",
+        "value": "unknown",
+        "rule": ">= 400 sf garage (2 bedrooms needs ~500-689 sf, 3 needs ~690-736 sf)"
+      },
+      {
+        "name": "HOA carry",
+        "state": "pass",
+        "value": "$97/mo",
+        "rule": "<= $1,200/yr"
+      },
+      {
+        "name": "Public sewer",
+        "state": "unknown",
+        "value": "not stated",
+        "rule": "Public sewer preferred; septic needs health jurisdiction capacity sign-off"
+      },
+      {
+        "name": "County tax rate known",
+        "state": "unknown",
+        "value": "unknown",
+        "rule": "Thurston / Lewis levy table"
+      }
+    ],
+    "fails": [],
+    "unknowns": [
+      "Garage to convert",
+      "Public sewer",
+      "County tax rate known"
+    ],
+    "garage_beds": null
+  },
+  "last_result": {
+    "run_date": "2026-10-25",
+    "best_score": 5.539778018835171,
+    "verdict": "MARGINAL",
+    "best_case": "At asking $469,995, best tested rent $6,000/mo -> score 5.5/10, $1,495/mo cash flow, IRR 6.3%",
+    "asking_score": 5.539778018835171,
+    "asking_verdict": "MARGINAL",
+    "asking_case": {
+      "price": 469995,
+      "rent": 6000,
+      "score": 5.54,
+      "npv": 63607,
+      "irr": 6.33,
+      "cf_mo": 1495,
+      "roi_pct": 129.9
+    },
+    "grid_best_score": 6.046218485586229,
+    "grid_best_verdict": "MARGINAL",
+    "rent_needed_at_ask": 6300,
+    "max_price_at_top_rent": 435000,
+    "cash_needed": 216899,
+    "passing_combos": 0,
+    "top": [
+      {
+        "price": 450000,
+        "rent": 6000,
+        "score": 6.05,
+        "irr": 7.08,
+        "cf_mo": 1621
+      },
+      {
+        "price": 475000,
+        "rent": 6000,
+        "score": 5.41,
+        "irr": 6.15,
+        "cf_mo": 1463
+      },
+      {
+        "price": 500000,
+        "rent": 6000,
+        "score": 4.9,
+        "irr": 5.28,
+        "cf_mo": 1305
+      },
+      {
+        "price": 525000,
+        "rent": 6000,
+        "score": 4.45,
+        "irr": 4.48,
+        "cf_mo": 1146
+      },
+      {
+        "price": 450000,
+        "rent": 5375,
+        "score": 4.19,
+        "irr": 3.93,
+        "cf_mo": 1128
+      }
+    ]
+  }
+}
