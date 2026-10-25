@@ -48,6 +48,7 @@ Node 22 (or any recent Node). Nothing else: no npm install, no key, no login.
 | Sweep NWMLS now | `node scout.js scan` |
 | Daily monitor (only new listings) | `node scout.js monitor` |
 | Saved properties with last score | `node scout.js list` |
+| Recalculate all saved homes at asking price | `node scout.js rescore` |
 | Refresh the mortgage rate | `node scout.js rate` |
 | Rebuild the landing page | `node scout.js index` |
 

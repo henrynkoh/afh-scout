@@ -9,7 +9,7 @@ const store = require('./lib/store');
 const zillow = require('./lib/zillow');
 const nwmls = require('./lib/nwmls');
 const { screenProperty } = require('./lib/screen');
-const { runGrid, money } = require('./lib/scenarios');
+const { runGrid, money, rentForScore, priceForScore } = require('./lib/scenarios');
 const { buildMarkdown, buildHtml } = require('./lib/report');
 const { buildLanding } = require('./lib/landing');
 const { getText } = require('./lib/net');
@@ -45,6 +45,9 @@ afh-scout - NWMLS to adult family home feasibility
 
   node scout.js list
         Saved properties and their last score.
+
+  node scout.js rescore
+        Recalculate every saved passing property at its actual asking price.
 
   node scout.js rate
         Pull the latest 30-year fixed rate (Freddie Mac via FRED) into the config.
@@ -94,9 +97,19 @@ function analyse(prop, cfg, overrides = {}) {
     rents: flags.rents ? String(flags.rents).split(',').map(Number) : undefined,
     topN: 5,
   });
+  const askingPrice = prop.price || cfg.scenarios.prices[2];
+  const askingGrid = runGrid(deal, cfg, {
+    prices: [askingPrice],
+    rents: cfg.scenarios.rents,
+    topN: 5,
+  });
+  const asking = askingGrid.top[0];
+  const topRent = cfg.scenarios.rents[cfg.scenarios.rents.length - 1];
+  const rentNeededAtAsk = rentForScore(deal, cfg, askingPrice, cfg.filters.min_score);
+  const maxPriceAtTopRent = priceForScore(deal, cfg, topRent, cfg.filters.min_score);
   const slug = store.slugify(prop.address) || store.keyOf(prop);
   const runDate = today();
-  const ctx = { prop, screen: screened, grid, cfg, runDate, deal };
+  const ctx = { prop, screen: screened, grid, asking, askingGrid, rentNeededAtAsk, maxPriceAtTopRent, cfg, runDate, deal };
   const dir = path.join(store.OUT, slug);
   fs.mkdirSync(dir, { recursive: true });
   fs.writeFileSync(path.join(dir, 'report.md'), buildMarkdown(ctx));
@@ -110,9 +123,16 @@ function analyse(prop, cfg, overrides = {}) {
     screen: screened,
     last_result: {
       run_date: runDate,
-      best_score: best.score,
-      verdict: best.verdict,
-      best_case: `${money(best.price)} purchase at ${money(best.rent)}/mo rent -> ${money(best.cfMonthlyY1)}/mo cash flow, IRR ${best.irr == null ? 'n/a' : best.irr.toFixed(1) + '%'}, payback ${best.paybackYears == null ? '>10' : best.paybackYears.toFixed(1)}yr`,
+      best_score: asking.score,
+      verdict: asking.verdict,
+      best_case: `At asking ${money(askingPrice)}, best tested rent ${money(asking.rent)}/mo -> score ${asking.score.toFixed(1)}/10, ${money(asking.cfMonthlyY1)}/mo cash flow, IRR ${asking.irr == null ? 'n/a' : asking.irr.toFixed(1) + '%'}`,
+      asking_score: asking.score,
+      asking_verdict: asking.verdict,
+      asking_case: { price: askingPrice, rent: asking.rent, score: +asking.score.toFixed(2), npv: Math.round(asking.npv), irr: asking.irr == null ? null : +asking.irr.toFixed(2), cf_mo: Math.round(asking.cfMonthlyY1), roi_pct: +(asking.roi * 100).toFixed(1) },
+      grid_best_score: best.score,
+      grid_best_verdict: best.verdict,
+      rent_needed_at_ask: rentNeededAtAsk,
+      max_price_at_top_rent: maxPriceAtTopRent,
       cash_needed: Math.round(cashNeeded),
       passing_combos: grid.ranked.filter((r) => r.score >= cfg.filters.min_score).length,
       top: grid.top.map((t) => ({ price: t.price, rent: t.rent, score: +t.score.toFixed(2), irr: t.irr == null ? null : +t.irr.toFixed(2), cf_mo: Math.round(t.cfMonthlyY1) })),
@@ -214,7 +234,6 @@ async function cmdMonitor() {
   const cfg = store.readConfig();
   const before = store.readState();
   const beforeSeen = new Set(before.seen);
-  const priceOf = new Map(before.prices || []);
   const res = await cmdScan();
   const key = (p) => String(p.mls_id || p.zpid) + '@' + (p.price || 0);
   const news = res.pass.filter((x) => !beforeSeen.has(key(x.p)));
@@ -223,14 +242,28 @@ async function cmdMonitor() {
     console.log(`Monitor ${today()}: nothing new worth analysing.`);
     return;
   }
-  const lines = [`# Monitor ${today()} - ${news.length} new candidate(s)`, ''];
-  const scored = [];
-  for (const { p } of news.slice(0, 5)) {
-    const ctx = analyse(p, cfg, {});
-    scored.push(ctx);
+  const scored = news.map(({ p }) => analyse(p, cfg, {}));
+  scored.sort((a, b) => b.asking.score - a.asking.score || b.asking.irr - a.asking.irr);
+  const leaders = scored.slice(0, 5);
+  const topRent = cfg.scenarios.rents[cfg.scenarios.rents.length - 1];
+  const lines = [`# Monitor ${today()} - ${news.length} new or price-changed candidate(s), all analysed`, ''];
+  lines.push('## Top 5 properties at their actual asking prices');
+  lines.push('');
+  lines.push(`Ranked at the highest tested AFH-ready lease (${money(topRent)}/mo); each property report still contains the full 25-combination price/rent table.`);
+  lines.push('');
+  lines.push('| # | Property | Ask | Garage | Ask score | Verdict | Cash flow /mo | NPV | IRR | ROI | Rent needed at ask | Max price at top rent |');
+  lines.push('|---|---|---|---|---|---|---|---|---|---|---|---|');
+  leaders.forEach((ctx, i) => {
+    const a = ctx.asking;
+    const garage = ctx.screen.garage_sf ? `${ctx.screen.garage_sf} sf` : (ctx.prop.garage_yn ? 'yes, size check' : 'unknown');
+    lines.push(`| ${i + 1} | ${ctx.prop.address} | ${money(ctx.prop.price)} | ${garage} | **${a.score.toFixed(1)}** | ${a.verdict} | ${money(a.cfMonthlyY1)} | ${money(a.npv)} | ${a.irr == null ? 'n/a' : a.irr.toFixed(1) + '%'} | ${(a.roi * 100).toFixed(0)}% | ${ctx.rentNeededAtAsk ? money(ctx.rentNeededAtAsk) + '/mo' : 'not reachable'} | ${ctx.maxPriceAtTopRent ? money(ctx.maxPriceAtTopRent) : 'not reachable'} |`);
+  });
+  lines.push('');
+  for (const ctx of leaders) {
+    const p = ctx.prop;
     lines.push(`## ${p.address} - ${money(p.price)}`);
     lines.push('');
-    lines.push(`All-in basis ${money(ctx.grid.top[0].allInBasis)} · best ${ctx.grid.top[0].score.toFixed(1)}/10 (${ctx.grid.top[0].verdict}) · ${ctx.grid.top[0].evidence}`);
+    lines.push(`At asking price: ${ctx.asking.score.toFixed(1)}/10 (${ctx.asking.verdict}) · ${ctx.asking.evidence}`);
     lines.push('');
     lines.push(require('./lib/report').top5Markdown(ctx.grid, cfg));
     lines.push('');
@@ -242,8 +275,25 @@ async function cmdMonitor() {
   buildLanding(cfg, { runDate: today() });
   console.log('');
   console.log(`Wrote ${f}`);
-  const best = scored.sort((a, b) => b.grid.top[0].score - a.grid.top[0].score)[0];
-  console.log(`Best new candidate: ${best.prop.address} - ${best.grid.top[0].score.toFixed(1)}/10 (${best.grid.top[0].verdict})`);
+  const best = leaders[0];
+  console.log(`Best new candidate at asking price: ${best.prop.address} - ${best.asking.score.toFixed(1)}/10 (${best.asking.verdict})`);
+}
+
+async function cmdRescore() {
+  const cfg = store.readConfig();
+  const props = store.all().filter((p) => p.screen ? p.screen.pass : screenProperty(p, cfg).pass);
+  if (!props.length) {
+    buildLanding(cfg, { runDate: today() });
+    console.log('No saved passing properties to rescore.');
+    return [];
+  }
+  const rows = props.map((p) => analyse(p, cfg, {}));
+  rows.sort((a, b) => b.asking.score - a.asking.score || ((b.asking.irr ?? -99) - (a.asking.irr ?? -99)));
+  console.log('| # | Property | Ask | Rent tested | Ask score | Verdict | IRR | Cash flow /mo |');
+  console.log('|---|---|---|---|---|---|---|---|');
+  rows.forEach((ctx, i) => console.log(`| ${i + 1} | ${ctx.prop.address} | ${money(ctx.prop.price)} | ${money(ctx.asking.rent)}/mo | ${ctx.asking.score.toFixed(1)} | ${ctx.asking.verdict} | ${ctx.asking.irr == null ? 'n/a' : ctx.asking.irr.toFixed(1) + '%'} | ${money(ctx.asking.cfMonthlyY1)} |`));
+  buildLanding(cfg, { runDate: today() });
+  return rows;
 }
 
 async function cmdList() {
@@ -340,6 +390,7 @@ function cmdSelftest() {
     if (cmd === 'scan') return await cmdScan();
     if (cmd === 'monitor') return await cmdMonitor();
     if (cmd === 'list') return await cmdList();
+    if (cmd === 'rescore') return await cmdRescore();
     if (cmd === 'rate') return await cmdRate();
     if (cmd === 'index') return cmdIndex();
     if (cmd === 'selftest') return cmdSelftest();

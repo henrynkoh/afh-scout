@@ -15,6 +15,7 @@ trap 'rmdir "$LOCK" 2>/dev/null || true' EXIT
 cd "$APP"
 "$NODE" scout.js rate || echo "WARN: rate refresh failed; using saved rate"
 "$NODE" scout.js monitor --limit 20
+"$NODE" scout.js rescore
 "$NODE" scout.js selftest
 "$NODE" scout.js index
 echo "DONE: $(date '+%Y-%m-%d %H:%M:%S %Z')"
