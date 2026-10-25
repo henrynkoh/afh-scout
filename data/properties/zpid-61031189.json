@@ -73,8 +73,8 @@
       {
         "name": "Garage to convert",
         "state": "pass",
-        "value": "~720 sf (null car)",
-        "rule": ">= 400 sf garage (2 bedrooms needs ~500-689 sf, 3 needs ~690-736 sf)"
+        "value": "~720 sf (24'x30')",
+        "rule": "Measured >= 400 sf garage (2 bedrooms needs ~500-689 sf, 3 needs ~690-736 sf)"
       },
       {
         "name": "Licensed bedrooms from garage",

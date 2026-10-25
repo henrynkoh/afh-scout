@@ -71,9 +71,9 @@
       },
       {
         "name": "Garage to convert",
-        "state": "pass",
+        "state": "unknown",
         "value": "Attached Garage, Off Street",
-        "rule": ">= 400 sf garage (2 bedrooms needs ~500-689 sf, 3 needs ~690-736 sf)"
+        "rule": "Measured >= 400 sf garage (2 bedrooms needs ~500-689 sf, 3 needs ~690-736 sf)"
       },
       {
         "name": "HOA carry",
@@ -96,6 +96,7 @@
     ],
     "fails": [],
     "unknowns": [
+      "Garage to convert",
       "Public sewer"
     ],
     "garage_sf": null,

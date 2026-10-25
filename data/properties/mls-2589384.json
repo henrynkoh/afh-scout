@@ -55,7 +55,7 @@
         "name": "Garage to convert",
         "state": "unknown",
         "value": "unknown",
-        "rule": ">= 400 sf garage (2 bedrooms needs ~500-689 sf, 3 needs ~690-736 sf)"
+        "rule": "Measured >= 400 sf garage (2 bedrooms needs ~500-689 sf, 3 needs ~690-736 sf)"
       },
       {
         "name": "HOA carry",

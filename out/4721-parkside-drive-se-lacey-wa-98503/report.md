@@ -35,7 +35,7 @@ List price **$515,000** · 4 bd / 3 ba · 1890 sf · ? built · Thurston County 
 | Actively for sale | PASS | FOR_SALE | Active / coming soon |
 | Single-family residence | PASS | SINGLE_FAMILY | Detached house (AFH occupancy) |
 | Bedrooms for the existing home | PASS | 4 | >= 3 bd in main home |
-| Garage to convert | PASS | Attached Garage | >= 400 sf garage (2 bedrooms needs ~500-689 sf, 3 needs ~690-736 sf) |
+| Garage to convert | CHECK | Attached Garage | Measured >= 400 sf garage (2 bedrooms needs ~500-689 sf, 3 needs ~690-736 sf) |
 | HOA carry | PASS | none | <= $1,200/yr |
 | Public sewer | CHECK | not stated | Public sewer preferred; septic needs health jurisdiction capacity sign-off |
 | County tax rate known | PASS | Thurston | Thurston / Lewis levy table |

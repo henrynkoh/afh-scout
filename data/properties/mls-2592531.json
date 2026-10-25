@@ -1,0 +1,147 @@
+{
+  "source": "NWMLS",
+  "source_area": "98579",
+  "mls_id": "2592531",
+  "address": "8446 169th Ln SW, Rochester, WA 98579",
+  "street": "8446 169th Ln SW",
+  "city": "Rochester",
+  "state": "WA",
+  "zip": "98579",
+  "price": 549900,
+  "status": "Active",
+  "beds": 3,
+  "baths": 3,
+  "sqft": 1923,
+  "lot_acres": 1.11,
+  "on_market": "2026-10-15T00:00:00.000Z",
+  "price_change": 0,
+  "hoa_monthly": null,
+  "type": "Single Family Residence",
+  "garage_yn": null,
+  "lat": 46.841876,
+  "lon": -123.060954,
+  "hero": "https://bpp.mlsgrid.com/images/NWM163460178/f60316c7-a654-43de-ade5-b19677e74930.jpg",
+  "nwmls_url": "https://www.nwmls.com/homes-for-sale/98579",
+  "enrich_error": "HTTP 403 for https://www.zillow.com/homes/8446-169th-Ln-SW%2C-Rochester%2C-WA-98579_rb/",
+  "slug": "8446-169th-ln-sw-rochester-wa-98579",
+  "screen": {
+    "pass": true,
+    "checks": [
+      {
+        "name": "Listing price inside scenario band",
+        "state": "pass",
+        "value": 549900,
+        "rule": "$450,000 - $550,000"
+      },
+      {
+        "name": "Actively for sale",
+        "state": "pass",
+        "value": "Active",
+        "rule": "Active / coming soon"
+      },
+      {
+        "name": "Single-family residence",
+        "state": "pass",
+        "value": "Single Family Residence",
+        "rule": "Detached house (AFH occupancy)"
+      },
+      {
+        "name": "Bedrooms for the existing home",
+        "state": "pass",
+        "value": 3,
+        "rule": ">= 3 bd in main home"
+      },
+      {
+        "name": "Garage to convert",
+        "state": "unknown",
+        "value": "unknown",
+        "rule": "Measured >= 400 sf garage (2 bedrooms needs ~500-689 sf, 3 needs ~690-736 sf)"
+      },
+      {
+        "name": "HOA carry",
+        "state": "pass",
+        "value": "none",
+        "rule": "<= $1,200/yr"
+      },
+      {
+        "name": "Public sewer",
+        "state": "unknown",
+        "value": "not stated",
+        "rule": "Public sewer preferred; septic needs health jurisdiction capacity sign-off"
+      },
+      {
+        "name": "County tax rate known",
+        "state": "unknown",
+        "value": "unknown",
+        "rule": "Thurston / Lewis levy table"
+      }
+    ],
+    "fails": [],
+    "unknowns": [
+      "Garage to convert",
+      "Public sewer",
+      "County tax rate known"
+    ],
+    "garage_beds": null
+  },
+  "last_result": {
+    "run_date": "2026-10-25",
+    "best_score": 4.278298505625301,
+    "verdict": "PASS",
+    "best_case": "At asking $549,900, best tested rent $6,000/mo -> score 4.3/10, $1,086/mo cash flow, IRR 4.3%",
+    "asking_score": 4.278298505625301,
+    "asking_verdict": "PASS",
+    "asking_case": {
+      "price": 549900,
+      "rent": 6000,
+      "score": 4.28,
+      "npv": 47608,
+      "irr": 4.26,
+      "cf_mo": 1086,
+      "roi_pct": 120.5
+    },
+    "grid_best_score": 6.475029954689725,
+    "grid_best_verdict": "CONDITIONAL",
+    "rent_needed_at_ask": 6800,
+    "max_price_at_top_rent": 450000,
+    "cash_needed": 238473,
+    "passing_combos": 0,
+    "top": [
+      {
+        "price": 450000,
+        "rent": 6000,
+        "score": 6.48,
+        "irr": 7.69,
+        "cf_mo": 1718
+      },
+      {
+        "price": 475000,
+        "rent": 6000,
+        "score": 5.82,
+        "irr": 6.74,
+        "cf_mo": 1560
+      },
+      {
+        "price": 500000,
+        "rent": 6000,
+        "score": 5.22,
+        "irr": 5.86,
+        "cf_mo": 1402
+      },
+      {
+        "price": 525000,
+        "rent": 6000,
+        "score": 4.76,
+        "irr": 5.03,
+        "cf_mo": 1243
+      },
+      {
+        "price": 450000,
+        "rent": 5375,
+        "score": 4.51,
+        "irr": 4.55,
+        "cf_mo": 1225
+      }
+    ]
+  }
+}

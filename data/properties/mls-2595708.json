@@ -1,0 +1,147 @@
+{
+  "source": "NWMLS",
+  "source_area": "98516",
+  "mls_id": "2595708",
+  "address": "3405 Lynn Ct NE, Lacey, WA 98516",
+  "street": "3405 Lynn Ct NE",
+  "city": "Lacey",
+  "state": "WA",
+  "zip": "98516",
+  "price": 479485,
+  "status": "Active",
+  "beds": 3,
+  "baths": 2,
+  "sqft": 1401,
+  "lot_acres": 0.14,
+  "on_market": "2026-10-23T00:00:00.000Z",
+  "price_change": 0,
+  "hoa_monthly": 10,
+  "type": "Single Family Residence",
+  "garage_yn": null,
+  "lat": 47.08188,
+  "lon": -122.748778,
+  "hero": "https://bpp.mlsgrid.com/images/NWM163656883/0bd04504-7e1d-411b-b00f-f2f81971186f.jpg",
+  "nwmls_url": "https://www.nwmls.com/homes-for-sale/98516",
+  "enrich_error": "HTTP 403 for https://www.zillow.com/homes/3405-Lynn-Ct-NE%2C-Lacey%2C-WA-98516_rb/",
+  "slug": "3405-lynn-ct-ne-lacey-wa-98516",
+  "screen": {
+    "pass": true,
+    "checks": [
+      {
+        "name": "Listing price inside scenario band",
+        "state": "pass",
+        "value": 479485,
+        "rule": "$450,000 - $550,000"
+      },
+      {
+        "name": "Actively for sale",
+        "state": "pass",
+        "value": "Active",
+        "rule": "Active / coming soon"
+      },
+      {
+        "name": "Single-family residence",
+        "state": "pass",
+        "value": "Single Family Residence",
+        "rule": "Detached house (AFH occupancy)"
+      },
+      {
+        "name": "Bedrooms for the existing home",
+        "state": "pass",
+        "value": 3,
+        "rule": ">= 3 bd in main home"
+      },
+      {
+        "name": "Garage to convert",
+        "state": "unknown",
+        "value": "unknown",
+        "rule": "Measured >= 400 sf garage (2 bedrooms needs ~500-689 sf, 3 needs ~690-736 sf)"
+      },
+      {
+        "name": "HOA carry",
+        "state": "pass",
+        "value": "$10/mo",
+        "rule": "<= $1,200/yr"
+      },
+      {
+        "name": "Public sewer",
+        "state": "unknown",
+        "value": "not stated",
+        "rule": "Public sewer preferred; septic needs health jurisdiction capacity sign-off"
+      },
+      {
+        "name": "County tax rate known",
+        "state": "unknown",
+        "value": "unknown",
+        "rule": "Thurston / Lewis levy table"
+      }
+    ],
+    "fails": [],
+    "unknowns": [
+      "Garage to convert",
+      "Public sewer",
+      "County tax rate known"
+    ],
+    "garage_beds": null
+  },
+  "last_result": {
+    "run_date": "2026-10-25",
+    "best_score": 5.665977238939668,
+    "verdict": "MARGINAL",
+    "best_case": "At asking $479,485, best tested rent $6,000/mo -> score 5.7/10, $1,522/mo cash flow, IRR 6.5%",
+    "asking_score": 5.665977238939668,
+    "asking_verdict": "MARGINAL",
+    "asking_case": {
+      "price": 479485,
+      "rent": 6000,
+      "score": 5.67,
+      "npv": 66501,
+      "irr": 6.52,
+      "cf_mo": 1522,
+      "roi_pct": 130.9
+    },
+    "grid_best_score": 6.430225924301663,
+    "grid_best_verdict": "CONDITIONAL",
+    "rent_needed_at_ask": 6250,
+    "max_price_at_top_rent": 450000,
+    "cash_needed": 219461,
+    "passing_combos": 0,
+    "top": [
+      {
+        "price": 450000,
+        "rent": 6000,
+        "score": 6.43,
+        "irr": 7.63,
+        "cf_mo": 1708
+      },
+      {
+        "price": 475000,
+        "rent": 6000,
+        "score": 5.78,
+        "irr": 6.68,
+        "cf_mo": 1550
+      },
+      {
+        "price": 500000,
+        "rent": 6000,
+        "score": 5.19,
+        "irr": 5.8,
+        "cf_mo": 1392
+      },
+      {
+        "price": 525000,
+        "rent": 6000,
+        "score": 4.72,
+        "irr": 4.97,
+        "cf_mo": 1233
+      },
+      {
+        "price": 450000,
+        "rent": 5375,
+        "score": 4.48,
+        "irr": 4.49,
+        "cf_mo": 1215
+      }
+    ]
+  }
+}

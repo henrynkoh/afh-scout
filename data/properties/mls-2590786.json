@@ -1,0 +1,88 @@
+{
+  "source": "NWMLS",
+  "source_area": "98516",
+  "mls_id": "2590786",
+  "address": "6237 Puget Rd NE, Olympia, WA 98516",
+  "street": "6237 Puget Rd NE",
+  "city": "Olympia",
+  "state": "WA",
+  "zip": "98516",
+  "price": 474900,
+  "status": "First Look",
+  "beds": 3,
+  "baths": 2,
+  "sqft": 1471,
+  "lot_acres": 2.05,
+  "on_market": "2026-10-23T00:00:00.000Z",
+  "price_change": null,
+  "hoa_monthly": null,
+  "type": "Single Family Residence",
+  "garage_yn": null,
+  "lat": 47.122794,
+  "lon": -122.808082,
+  "hero": "https://bpp.mlsgrid.com/images/NWM163361176/176ac53a-e867-4310-974f-6f60e0cf57bf.jpg",
+  "nwmls_url": "https://www.nwmls.com/homes-for-sale/98516",
+  "enrich_error": "HTTP 403 for https://www.zillow.com/homes/6237-Puget-Rd-NE%2C-Olympia%2C-WA-98516_rb/",
+  "screen": {
+    "pass": false,
+    "checks": [
+      {
+        "name": "Listing price inside scenario band",
+        "state": "pass",
+        "value": 474900,
+        "rule": "$450,000 - $550,000"
+      },
+      {
+        "name": "Actively for sale",
+        "state": "fail",
+        "value": "First Look",
+        "rule": "Active / coming soon"
+      },
+      {
+        "name": "Single-family residence",
+        "state": "pass",
+        "value": "Single Family Residence",
+        "rule": "Detached house (AFH occupancy)"
+      },
+      {
+        "name": "Bedrooms for the existing home",
+        "state": "pass",
+        "value": 3,
+        "rule": ">= 3 bd in main home"
+      },
+      {
+        "name": "Garage to convert",
+        "state": "unknown",
+        "value": "unknown",
+        "rule": "Measured >= 400 sf garage (2 bedrooms needs ~500-689 sf, 3 needs ~690-736 sf)"
+      },
+      {
+        "name": "HOA carry",
+        "state": "pass",
+        "value": "none",
+        "rule": "<= $1,200/yr"
+      },
+      {
+        "name": "Public sewer",
+        "state": "unknown",
+        "value": "not stated",
+        "rule": "Public sewer preferred; septic needs health jurisdiction capacity sign-off"
+      },
+      {
+        "name": "County tax rate known",
+        "state": "unknown",
+        "value": "unknown",
+        "rule": "Thurston / Lewis levy table"
+      }
+    ],
+    "fails": [
+      "Actively for sale"
+    ],
+    "unknowns": [
+      "Garage to convert",
+      "Public sewer",
+      "County tax rate known"
+    ],
+    "garage_beds": null
+  }
+}

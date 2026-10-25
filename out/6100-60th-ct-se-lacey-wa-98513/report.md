@@ -35,7 +35,7 @@ List price **$493,000** · 3 bd / 2 ba · 1519 sf · ? built · ? County · gara
 | Actively for sale | PASS | Active | Active / coming soon |
 | Single-family residence | PASS | Single Family Residence | Detached house (AFH occupancy) |
 | Bedrooms for the existing home | PASS | 3 | >= 3 bd in main home |
-| Garage to convert | CHECK | unknown | >= 400 sf garage (2 bedrooms needs ~500-689 sf, 3 needs ~690-736 sf) |
+| Garage to convert | CHECK | unknown | Measured >= 400 sf garage (2 bedrooms needs ~500-689 sf, 3 needs ~690-736 sf) |
 | HOA carry | PASS | $4/mo | <= $1,200/yr |
 | Public sewer | CHECK | not stated | Public sewer preferred; septic needs health jurisdiction capacity sign-off |
 | County tax rate known | CHECK | unknown | Thurston / Lewis levy table |
