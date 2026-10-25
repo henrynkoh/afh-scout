@@ -8,7 +8,11 @@
 Nothing is fetched from a paid data provider. Listings come from the NWMLS public search pages,
 property facts from the listing's Zillow page, and the mortgage rate from Freddie Mac.
 
-## 2. Commands
+## 2. Routine execution
+
+`.github/workflows/daily-afh-monitor.yml` is the primary unattended routine. It schedules at both UTC offsets for Pacific time and a clock gate runs only at 7 AM locally, so daylight-saving changes do not create a second daily run. The job refreshes the rate, runs the monitor, runs 15 controls, rebuilds the index, and commits `data/state.json` plus `out/`. The optional Mac fallback is `install-routine.sh`.
+
+## 3. Commands
 
 ### `run <zillow-url | address | saved-id>`
 The main command. Saves the property, screens it, runs all 25 combinations, writes
@@ -43,7 +47,7 @@ routine calls.
 `rate` pulls the latest 30-year fixed rate from FRED and writes it into the config.
 `index` rebuilds `out/index.html`. `selftest` runs 15 assertions.
 
-## 3. The numbers
+## 4. The numbers
 
 **Financing.** Loan = price x (1 - 25%). Rate = Freddie Mac 30-yr FRM + 0.75 pt investor spread.
 30-year amortisation. Monthly payment by standard annuity formula.
@@ -78,7 +82,7 @@ conversion months, so those months are not counted twice.
 | Rent cushion | Rent / breakeven rent, where breakeven rent covers debt service plus fixed costs after vacancy, management and maintenance |
 | DSCR | Year-1 NOI / annual debt service |
 
-## 4. The 1-10 judgement
+## 5. The 1-10 judgement
 
 Six components, each scored 0-10 by piecewise-linear thresholds, then weighted:
 
@@ -104,13 +108,13 @@ within 3 points of the hurdle; **MARGINAL** 5+; **PASS** everything else.
 The report always names the weakest component ("weakest link") and, when the score was cut, says
 by how much and why.
 
-## 5. Filter gate
+## 6. Filter gate
 
 Hard fails stop a property: price outside $450,000-$550,000, not for sale, fewer than 3 bedrooms,
 no garage, garage too small for two bedrooms. Items marked CHECK need a human answer before money
 is spent: garage square footage not stated, sewer type, unknown county, HOA over $1,200/yr.
 
-## 6. Config reference (`data/config.json`)
+## 7. Config reference (`data/config.json`)
 
 | Key | Meaning |
 |---|---|
@@ -131,13 +135,13 @@ is spent: garage square footage not stated, sewer type, unknown county, HOA over
 Changing the grid to 3 x 5 or the hold to 7 years needs only a config edit; every table and
 chart follows.
 
-## 7. Data model
+## 8. Data model
 
 `data/properties/<key>.json` holds the property facts, the screen result and the last run summary
 (`best_score`, `verdict`, `best_case`, `cash_needed`, `top`). `data/state.json` holds the seen
 listing ids so `monitor` only reports new inventory.
 
-## 8. Troubleshooting
+## 9. Troubleshooting
 
 - **A Zillow link returns no structured data.** Retry once; if it still fails, pass the address.
 - **NWMLS returns 30 listings per area.** That is the newest page; the sweep is built for spotting
@@ -146,7 +150,7 @@ listing ids so `monitor` only reports new inventory.
   dimensions it used, so check them. `--garage-sf` overrides.
 - **Zero passing candidates on a sweep** is a normal result and means the market, not the code.
 
-## 9. Extending
+## 10. Extending
 
 - New county: add its levy to `market.property_tax.by_county` and its zips to `watch.areas`.
 - New area shape: any NWMLS path works, e.g. `lewis-county`, `thurston-county-washington`, `98531`.

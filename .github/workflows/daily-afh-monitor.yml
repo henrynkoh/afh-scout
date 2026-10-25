@@ -1,0 +1,77 @@
+name: Daily AFH property monitor
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Run at both possible UTC equivalents; the clock gate keeps only 7 AM Pacific.
+    - cron: '0 14,15 * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-afh-monitor
+  cancel-in-progress: false
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Pacific clock
+        id: clock
+        shell: bash
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ "$(TZ=America/Los_Angeles date +%H)" = "07" ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/checkout@v4
+        if: steps.clock.outputs.run == 'true'
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        if: steps.clock.outputs.run == 'true'
+        with:
+          node-version: '22'
+
+      - name: Refresh rate and monitor NWMLS
+        if: steps.clock.outputs.run == 'true'
+        shell: bash
+        run: |
+          node scout.js rate || echo "Rate refresh failed; keeping saved rate"
+          node scout.js monitor --limit 20 | tee monitor-run.txt
+          node scout.js selftest | tee selftest.txt
+          node scout.js index
+
+      - name: Write run summary
+        if: steps.clock.outputs.run == 'true'
+        shell: bash
+        run: |
+          {
+            echo "# AFH Scout daily monitor"
+            echo
+            echo '```text'
+            cat monitor-run.txt
+            echo '```'
+            echo
+            echo '```text'
+            tail -n 18 selftest.txt
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Save state and reports
+        if: steps.clock.outputs.run == 'true'
+        shell: bash
+        run: |
+          git config user.name "afh-scout-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -f data/config.json data/state.json out
+          if git diff --cached --quiet; then
+            echo "No state or report changes"
+          else
+            git commit -m "Daily AFH monitor $(TZ=America/Los_Angeles date +%F)"
+            git push
+          fi

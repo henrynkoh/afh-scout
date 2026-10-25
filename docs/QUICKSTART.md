@@ -25,6 +25,11 @@ Every analysed property is a card there; click "Feasibility report".
 
 ## Day to day
 
+The public repository already contains a scheduled GitHub Actions routine at 7:00 AM Pacific. It preserves the seen-listing and price state in the repo and updates the Pages reports.
+
+For a local run:
+
+
     node scout.js monitor
 
 Reads NWMLS for the watched areas, keeps only listings it has never seen, screens them, and

@@ -30,6 +30,10 @@ It answers three questions, in this order:
 Cash at risk adds the down payment (25%) and closing (2%). Every metric is computed on that
 cash, not on the purchase price.
 
+## Automatic routine
+
+GitHub Actions runs the monitor every day at **7:00 AM America/Los_Angeles**, refreshes the Freddie Mac rate, runs the NWMLS/Zillow funnel, verifies all 15 controls, and commits the updated state and reports back to the repository. `install-routine.sh` installs the same job on the Mac as an optional local fallback.
+
 ## Requirements
 
 Node 22 (or any recent Node). Nothing else: no npm install, no key, no login.
