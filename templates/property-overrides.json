@@ -1,0 +1,15 @@
+{
+  "zillow_url": "https://www.zillow.com/homedetails/...",
+  "purchase_price_override": null,
+  "county_override": "Thurston",
+  "garage_sf_override": null,
+  "hoa_monthly_override": 0,
+  "rent_note": "AFH-ready whole-home lease, not plain family rent",
+  "due_diligence": {
+    "public_sewer": "unknown",
+    "garage_attached": "unknown",
+    "slab_header_review": "open",
+    "dshs_prelicense_walkthrough": "open",
+    "permitting_jurisdiction": "unknown"
+  }
+}
