@@ -1,0 +1,164 @@
+{
+  "source": "Zillow",
+  "zpid": "89018133",
+  "url": "https://www.zillow.com/homedetails/1410-Mark-Twain-Dr-Centralia-WA-98531/89018133_zpid/",
+  "address": "1410 Mark Twain Drive, Centralia, WA 98531",
+  "street": "1410 Mark Twain Drive",
+  "city": "Centralia",
+  "state": "WA",
+  "zip": "98531",
+  "county": "Lewis",
+  "price": 525000,
+  "status": "FOR_SALE",
+  "beds": 3,
+  "baths": 2,
+  "sqft": 1440,
+  "lot_acres": 6098.4,
+  "year_built": null,
+  "home_type": "SINGLE_FAMILY",
+  "hoa_monthly": null,
+  "tax_annual": 3360,
+  "tax_rate": 0.0064,
+  "parking": [
+    "Attached Garage",
+    "RV Parking"
+  ],
+  "garage_yn": true,
+  "garage_spaces": null,
+  "garage_sf_est": null,
+  "garage_dims": null,
+  "mls_id": "2590821",
+  "subdivision": null,
+  "zoning": null,
+  "sewer": null,
+  "water": null,
+  "heating": null,
+  "cooling": null,
+  "description": "Start making new memories while you spend your Golden Years on the quiet edge of a sunlit pond in the lovely Stillwaters Estates! This 1,378sf Manchester home makes a lovely first impression with a stunning beveled-glass entry door & a bright, spacious interior filled with natural light. Inside, the spacious Living and Dining Rooms flow seamlessly into a semi-open kitchen, creating an inviting space to gather. The generous Primary Suite captures those lovely pond views, and features a walk-in closet and oversized walk-in shower. Two additional bedrooms offer endless possibilities for guests, a home office, or your favorite hobbies. Just outside the living room is a wrap-around porch—your front-row seat to gorgeous sunsets, birds in flight, & the ever-changing wildlife around the pond! It’s the perfect spot for morning coffee, afternoon unwinding, or entertaining friends as the sun goes down. Situated in a setting that invites you to slow down & savor the moment, this home is ready to make every day living feel a little more special! Located in Stillwaters Estates, Lewis County's premier 55+ gated, NON-HOA, privately owned & professionally managed community, where all the homes are ",
+  "days_on_market": null,
+  "zestimate": null,
+  "rent_zestimate": null,
+  "fetched_at": "2026-10-25T18:36:45.591Z",
+  "nwmls_price": 525000,
+  "source_area": "98531",
+  "slug": "1410-mark-twain-drive-centralia-wa-98531",
+  "screen": {
+    "pass": true,
+    "checks": [
+      {
+        "name": "Listing price inside scenario band",
+        "state": "pass",
+        "value": 525000,
+        "rule": "$450,000 - $550,000"
+      },
+      {
+        "name": "Actively for sale",
+        "state": "pass",
+        "value": "FOR_SALE",
+        "rule": "Active / coming soon"
+      },
+      {
+        "name": "Single-family residence",
+        "state": "pass",
+        "value": "SINGLE_FAMILY",
+        "rule": "Detached house (AFH occupancy)"
+      },
+      {
+        "name": "Bedrooms for the existing home",
+        "state": "pass",
+        "value": 3,
+        "rule": ">= 3 bd in main home"
+      },
+      {
+        "name": "Garage to convert",
+        "state": "pass",
+        "value": "Attached Garage, RV Parking",
+        "rule": ">= 400 sf garage (2 bedrooms needs ~500-689 sf, 3 needs ~690-736 sf)"
+      },
+      {
+        "name": "HOA carry",
+        "state": "pass",
+        "value": "none",
+        "rule": "<= $1,200/yr"
+      },
+      {
+        "name": "Public sewer",
+        "state": "unknown",
+        "value": "not stated",
+        "rule": "Public sewer preferred; septic needs health jurisdiction capacity sign-off"
+      },
+      {
+        "name": "County tax rate known",
+        "state": "pass",
+        "value": "Lewis",
+        "rule": "Thurston / Lewis levy table"
+      }
+    ],
+    "fails": [],
+    "unknowns": [
+      "Public sewer"
+    ],
+    "garage_sf": null,
+    "garage_beds": null
+  },
+  "last_result": {
+    "run_date": "2026-10-25",
+    "best_score": 4.865617480205624,
+    "verdict": "PASS",
+    "best_case": "At asking $525,000, best tested rent $6,000/mo -> score 4.9/10, $1,278/mo cash flow, IRR 5.2%",
+    "asking_score": 4.865617480205624,
+    "asking_verdict": "PASS",
+    "asking_case": {
+      "price": 525000,
+      "rent": 6000,
+      "score": 4.87,
+      "npv": 56737,
+      "irr": 5.23,
+      "cf_mo": 1278,
+      "roi_pct": 125
+    },
+    "grid_best_score": 6.610263638420898,
+    "grid_best_verdict": "CONDITIONAL",
+    "rent_needed_at_ask": 6550,
+    "max_price_at_top_rent": 455000,
+    "cash_needed": 231750,
+    "passing_combos": 1,
+    "top": [
+      {
+        "price": 450000,
+        "rent": 6000,
+        "score": 6.61,
+        "irr": 7.88,
+        "cf_mo": 1748
+      },
+      {
+        "price": 475000,
+        "rent": 6000,
+        "score": 5.95,
+        "irr": 6.94,
+        "cf_mo": 1592
+      },
+      {
+        "price": 500000,
+        "rent": 6000,
+        "score": 5.34,
+        "irr": 6.05,
+        "cf_mo": 1435
+      },
+      {
+        "price": 525000,
+        "rent": 6000,
+        "score": 4.87,
+        "irr": 5.23,
+        "cf_mo": 1278
+      },
+      {
+        "price": 450000,
+        "rent": 5375,
+        "score": 4.62,
+        "irr": 4.74,
+        "cf_mo": 1255
+      }
+    ]
+  }
+}

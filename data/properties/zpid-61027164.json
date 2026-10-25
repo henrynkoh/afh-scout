@@ -1,0 +1,107 @@
+{
+  "source": "Zillow",
+  "zpid": "61027164",
+  "url": "https://www.zillow.com/homedetails/2568-Jackson-Hwy-Chehalis-WA-98532/61027164_zpid/",
+  "address": "2568 Jackson Highway, Chehalis, WA 98532",
+  "street": "2568 Jackson Highway",
+  "city": "Chehalis",
+  "state": "WA",
+  "zip": "98532",
+  "county": "Lewis",
+  "price": 549000,
+  "status": "FOR_SALE",
+  "beds": 3,
+  "baths": 1,
+  "sqft": 3712,
+  "lot_acres": 1.09,
+  "year_built": null,
+  "home_type": "SINGLE_FAMILY",
+  "hoa_monthly": null,
+  "tax_annual": 3514,
+  "tax_rate": 0.0064,
+  "parking": [
+    "Detached Carport",
+    "Driveway",
+    "Off Street",
+    "RV Parking"
+  ],
+  "garage_yn": false,
+  "garage_spaces": null,
+  "garage_sf_est": null,
+  "garage_dims": null,
+  "mls_id": "2589837",
+  "subdivision": null,
+  "zoning": null,
+  "sewer": null,
+  "water": null,
+  "heating": null,
+  "cooling": null,
+  "description": "Has been used as a primary residence for many years providing comfort and convenience for the owners. Main level offers 1944 Sq. ft. of finished living space. Durable kitchen with tons of cabinets, huge utility room and beautiful real wood floors. Wood burning fireplace on main floor as well as another one in the walk out basement. Highest and best use of this property could be interesting. It might be possible to convert to a Triplex with the 1768 sq. ft. unfinished basement. This unique location might work for a contractors office/living quarters utilizing the parking, outbuildings and high visibility as well. Buyer to verify all.",
+  "days_on_market": null,
+  "zestimate": 531400,
+  "rent_zestimate": 1514,
+  "fetched_at": "2026-10-25T18:44:40.610Z",
+  "nwmls_price": 549000,
+  "source_area": "98532",
+  "screen": {
+    "pass": false,
+    "checks": [
+      {
+        "name": "Listing price inside scenario band",
+        "state": "pass",
+        "value": 549000,
+        "rule": "$450,000 - $550,000"
+      },
+      {
+        "name": "Actively for sale",
+        "state": "pass",
+        "value": "FOR_SALE",
+        "rule": "Active / coming soon"
+      },
+      {
+        "name": "Single-family residence",
+        "state": "pass",
+        "value": "SINGLE_FAMILY",
+        "rule": "Detached house (AFH occupancy)"
+      },
+      {
+        "name": "Bedrooms for the existing home",
+        "state": "pass",
+        "value": 3,
+        "rule": ">= 3 bd in main home"
+      },
+      {
+        "name": "Garage to convert",
+        "state": "fail",
+        "value": "Detached Carport, Driveway, Off Street, RV Parking",
+        "rule": ">= 400 sf garage (2 bedrooms needs ~500-689 sf, 3 needs ~690-736 sf)"
+      },
+      {
+        "name": "HOA carry",
+        "state": "pass",
+        "value": "none",
+        "rule": "<= $1,200/yr"
+      },
+      {
+        "name": "Public sewer",
+        "state": "unknown",
+        "value": "not stated",
+        "rule": "Public sewer preferred; septic needs health jurisdiction capacity sign-off"
+      },
+      {
+        "name": "County tax rate known",
+        "state": "pass",
+        "value": "Lewis",
+        "rule": "Thurston / Lewis levy table"
+      }
+    ],
+    "fails": [
+      "Garage to convert"
+    ],
+    "unknowns": [
+      "Public sewer"
+    ],
+    "garage_sf": null,
+    "garage_beds": null
+  }
+}

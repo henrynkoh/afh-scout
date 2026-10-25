@@ -1,0 +1,163 @@
+{
+  "source": "Zillow",
+  "zpid": "92400334",
+  "url": "https://www.zillow.com/homedetails/228-Fenway-Dr-Napavine-WA-98532/92400334_zpid/",
+  "address": "228 Fenway Drive, Napavine, WA 98532",
+  "street": "228 Fenway Drive",
+  "city": "Napavine",
+  "state": "WA",
+  "zip": "98532",
+  "county": "Lewis",
+  "price": 475000,
+  "status": "FOR_SALE",
+  "beds": 3,
+  "baths": 3,
+  "sqft": 1898,
+  "lot_acres": 8276.4,
+  "year_built": null,
+  "home_type": "SINGLE_FAMILY",
+  "hoa_monthly": null,
+  "tax_annual": 3040,
+  "tax_rate": 0.0064,
+  "parking": [
+    "Attached Garage"
+  ],
+  "garage_yn": true,
+  "garage_spaces": null,
+  "garage_sf_est": null,
+  "garage_dims": null,
+  "mls_id": "2593105",
+  "subdivision": null,
+  "zoning": null,
+  "sewer": null,
+  "water": null,
+  "heating": null,
+  "cooling": null,
+  "description": "Beautifully maintained 3-bedroom, 2.5-bathroom home offering 1,898+/- square feet of living space! Built in 2019, this home has a like-new feel and is located in a fantastic Napavine neighborhood. The spacious open-concept living, dining, and kitchen area features vaulted ceilings, gorgeous flooring, and plenty of natural light. The kitchen features a center island, with all appliances included! Beautiful marble countertops throughout the home, including the kitchen, bathrooms, and laundry room. The main-floor primary suite features a walk-in closet and a beautifully appointed en-suite bath with a detailed tile shower. Upstairs, you'll find two nicely sized bedrooms with ceiling fans and great closet space. An oversized laundry room, generous pantry, and ample storage throughout add everyday convenience. Situated on a 0.19+/- acre lot with a fully fenced backyard and a deck just off the living area, perfect for entertaining, relaxing, or gardening. Conveniently located near Napavine schools with no HOA!",
+  "days_on_market": null,
+  "zestimate": 474300,
+  "rent_zestimate": 2531,
+  "fetched_at": "2026-10-25T18:44:39.635Z",
+  "nwmls_price": 475000,
+  "source_area": "98532",
+  "slug": "228-fenway-drive-napavine-wa-98532",
+  "screen": {
+    "pass": true,
+    "checks": [
+      {
+        "name": "Listing price inside scenario band",
+        "state": "pass",
+        "value": 475000,
+        "rule": "$450,000 - $550,000"
+      },
+      {
+        "name": "Actively for sale",
+        "state": "pass",
+        "value": "FOR_SALE",
+        "rule": "Active / coming soon"
+      },
+      {
+        "name": "Single-family residence",
+        "state": "pass",
+        "value": "SINGLE_FAMILY",
+        "rule": "Detached house (AFH occupancy)"
+      },
+      {
+        "name": "Bedrooms for the existing home",
+        "state": "pass",
+        "value": 3,
+        "rule": ">= 3 bd in main home"
+      },
+      {
+        "name": "Garage to convert",
+        "state": "pass",
+        "value": "Attached Garage",
+        "rule": ">= 400 sf garage (2 bedrooms needs ~500-689 sf, 3 needs ~690-736 sf)"
+      },
+      {
+        "name": "HOA carry",
+        "state": "pass",
+        "value": "none",
+        "rule": "<= $1,200/yr"
+      },
+      {
+        "name": "Public sewer",
+        "state": "unknown",
+        "value": "not stated",
+        "rule": "Public sewer preferred; septic needs health jurisdiction capacity sign-off"
+      },
+      {
+        "name": "County tax rate known",
+        "state": "pass",
+        "value": "Lewis",
+        "rule": "Thurston / Lewis levy table"
+      }
+    ],
+    "fails": [],
+    "unknowns": [
+      "Public sewer"
+    ],
+    "garage_sf": null,
+    "garage_beds": null
+  },
+  "last_result": {
+    "run_date": "2026-10-25",
+    "best_score": 5.94740589783592,
+    "verdict": "MARGINAL",
+    "best_case": "At asking $475,000, best tested rent $6,000/mo -> score 5.9/10, $1,592/mo cash flow, IRR 6.9%",
+    "asking_score": 5.94740589783592,
+    "asking_verdict": "MARGINAL",
+    "asking_case": {
+      "price": 475000,
+      "rent": 6000,
+      "score": 5.95,
+      "npv": 70391,
+      "irr": 6.94,
+      "cf_mo": 1592,
+      "roi_pct": 132.8
+    },
+    "grid_best_score": 6.610263638420898,
+    "grid_best_verdict": "CONDITIONAL",
+    "rent_needed_at_ask": 6175,
+    "max_price_at_top_rent": 455000,
+    "cash_needed": 218250,
+    "passing_combos": 1,
+    "top": [
+      {
+        "price": 450000,
+        "rent": 6000,
+        "score": 6.61,
+        "irr": 7.88,
+        "cf_mo": 1748
+      },
+      {
+        "price": 475000,
+        "rent": 6000,
+        "score": 5.95,
+        "irr": 6.94,
+        "cf_mo": 1592
+      },
+      {
+        "price": 500000,
+        "rent": 6000,
+        "score": 5.34,
+        "irr": 6.05,
+        "cf_mo": 1435
+      },
+      {
+        "price": 525000,
+        "rent": 6000,
+        "score": 4.87,
+        "irr": 5.23,
+        "cf_mo": 1278
+      },
+      {
+        "price": 450000,
+        "rent": 5375,
+        "score": 4.62,
+        "irr": 4.74,
+        "cf_mo": 1255
+      }
+    ]
+  }
+}

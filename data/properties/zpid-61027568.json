@@ -1,0 +1,107 @@
+{
+  "source": "Zillow",
+  "zpid": "61027568",
+  "url": "https://www.zillow.com/homedetails/169-Jackson-View-Dr-Chehalis-WA-98532/61027568_zpid/",
+  "address": "169 Jackson View Drive, Chehalis, WA 98532",
+  "street": "169 Jackson View Drive",
+  "city": "Chehalis",
+  "state": "WA",
+  "zip": "98532",
+  "county": "Lewis",
+  "price": 430000,
+  "status": "FOR_SALE",
+  "beds": 3,
+  "baths": 2,
+  "sqft": 1481,
+  "lot_acres": 9583.2,
+  "year_built": null,
+  "home_type": "SINGLE_FAMILY",
+  "hoa_monthly": null,
+  "tax_annual": 2752,
+  "tax_rate": 0.0064,
+  "parking": [
+    "Driveway",
+    "Attached Garage",
+    "Off Street",
+    "RV Parking"
+  ],
+  "garage_yn": true,
+  "garage_spaces": null,
+  "garage_sf_est": null,
+  "garage_dims": null,
+  "mls_id": "2576596",
+  "subdivision": null,
+  "zoning": null,
+  "sewer": null,
+  "water": null,
+  "heating": null,
+  "cooling": null,
+  "description": "Comfortable one-level living in the desirable Jackson View Estates neighborhood of Chehalis—with no HOA! This inviting 3-bedroom home features an open floor plan with two living spaces, a kitchen with breakfast bar that opens to the guest entertainment room, and a great room also. Spacious primary bedroom with a ¾ bath and two closets. Many important updates have already been completed, including a new roof in 2019, windows in 2021, heat pump and furnace in 2021, and updated kitchen appliances in 2021/2022. The backyard was improved in 2025 with a patio and retaining wall, creating an easy-to-enjoy outdoor space. Generous RV and off-street parking, along with a clean, finished garage, add to the convenience. Located just a few blocks from the 27-hole Newaukum Valley Golf Course, this well-maintained home is ready for its next owner!",
+  "days_on_market": null,
+  "zestimate": 427800,
+  "rent_zestimate": 2289,
+  "fetched_at": "2026-10-25T18:36:50.034Z",
+  "nwmls_price": 430000,
+  "source_area": "98532",
+  "screen": {
+    "pass": false,
+    "checks": [
+      {
+        "name": "Listing price inside scenario band",
+        "state": "fail",
+        "value": 430000,
+        "rule": "$450,000 - $550,000"
+      },
+      {
+        "name": "Actively for sale",
+        "state": "pass",
+        "value": "FOR_SALE",
+        "rule": "Active / coming soon"
+      },
+      {
+        "name": "Single-family residence",
+        "state": "pass",
+        "value": "SINGLE_FAMILY",
+        "rule": "Detached house (AFH occupancy)"
+      },
+      {
+        "name": "Bedrooms for the existing home",
+        "state": "pass",
+        "value": 3,
+        "rule": ">= 3 bd in main home"
+      },
+      {
+        "name": "Garage to convert",
+        "state": "pass",
+        "value": "Driveway, Attached Garage, Off Street, RV Parking",
+        "rule": ">= 400 sf garage (2 bedrooms needs ~500-689 sf, 3 needs ~690-736 sf)"
+      },
+      {
+        "name": "HOA carry",
+        "state": "pass",
+        "value": "none",
+        "rule": "<= $1,200/yr"
+      },
+      {
+        "name": "Public sewer",
+        "state": "unknown",
+        "value": "not stated",
+        "rule": "Public sewer preferred; septic needs health jurisdiction capacity sign-off"
+      },
+      {
+        "name": "County tax rate known",
+        "state": "pass",
+        "value": "Lewis",
+        "rule": "Thurston / Lewis levy table"
+      }
+    ],
+    "fails": [
+      "Listing price inside scenario band"
+    ],
+    "unknowns": [
+      "Public sewer"
+    ],
+    "garage_sf": null,
+    "garage_beds": null
+  }
+}

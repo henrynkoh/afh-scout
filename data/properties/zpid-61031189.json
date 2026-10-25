@@ -1,0 +1,171 @@
+{
+  "source": "Zillow",
+  "zpid": "61031189",
+  "url": "https://www.zillow.com/homedetails/3727-Prairie-Ave-Centralia-WA-98531/61031189_zpid/",
+  "address": "3727 Prairie Avenue, Centralia, WA 98531",
+  "street": "3727 Prairie Avenue",
+  "city": "Centralia",
+  "state": "WA",
+  "zip": "98531",
+  "county": "Lewis",
+  "price": 540000,
+  "status": "FOR_SALE",
+  "beds": 3,
+  "baths": 2,
+  "sqft": 1545,
+  "lot_acres": 0.9400000000000001,
+  "year_built": null,
+  "home_type": "SINGLE_FAMILY",
+  "hoa_monthly": null,
+  "tax_annual": 3456,
+  "tax_rate": 0.0064,
+  "parking": [
+    "Attached Garage",
+    "Detached Garage",
+    "RV Parking"
+  ],
+  "garage_yn": true,
+  "garage_spaces": null,
+  "garage_sf_est": 720,
+  "garage_dims": "24'x30'",
+  "mls_id": "2593429",
+  "subdivision": null,
+  "zoning": null,
+  "sewer": null,
+  "water": null,
+  "heating": null,
+  "cooling": null,
+  "description": "Welcome Home! Located in a great, established, and well cared for neighborhood, this charming 3 bedroom, 2 bath home offers just shy of 1,550 sq. ft. of comfortable living space and plenty of room to enjoy both inside and out. Step inside to a spacious living room with vaulted ceilings, creating an open and inviting atmosphere. The newer, updated kitchen features beautiful cabinetry, an eating bar, and a separate dining area perfect for everyday meals or entertaining guests. Outside, the backyard is where this property truly shines. Step onto the patio, ideal for summer gatherings, BBQs, and relaxing with friends. The large, fully fenced backyard offers garden space, fruit trees, a garden shed, RV parking, and an impressive 24' x 30' shop, providing plenty of room for hobbies, projects, storage, or recreational toys.This well-kept home is move-in ready and waiting for you to make it your own. Conveniently located near shopping, parks, the sports hub, and schools, with easy access to I-5, making commuting a breeze. Homes offering this combination of space, location, RV parking, and a large shop don't come along often and this one is sure to move quickly! Call your favorite Broker to",
+  "days_on_market": null,
+  "zestimate": 535700,
+  "rent_zestimate": 1984,
+  "fetched_at": "2026-10-25T18:36:44.664Z",
+  "nwmls_price": 540000,
+  "source_area": "98531",
+  "slug": "3727-prairie-avenue-centralia-wa-98531",
+  "screen": {
+    "pass": true,
+    "checks": [
+      {
+        "name": "Listing price inside scenario band",
+        "state": "pass",
+        "value": 540000,
+        "rule": "$450,000 - $550,000"
+      },
+      {
+        "name": "Actively for sale",
+        "state": "pass",
+        "value": "FOR_SALE",
+        "rule": "Active / coming soon"
+      },
+      {
+        "name": "Single-family residence",
+        "state": "pass",
+        "value": "SINGLE_FAMILY",
+        "rule": "Detached house (AFH occupancy)"
+      },
+      {
+        "name": "Bedrooms for the existing home",
+        "state": "pass",
+        "value": 3,
+        "rule": ">= 3 bd in main home"
+      },
+      {
+        "name": "Garage to convert",
+        "state": "pass",
+        "value": "~720 sf (null car)",
+        "rule": ">= 400 sf garage (2 bedrooms needs ~500-689 sf, 3 needs ~690-736 sf)"
+      },
+      {
+        "name": "Licensed bedrooms from garage",
+        "state": "pass",
+        "value": "3 bd (720 sf)",
+        "rule": "2-3 bedrooms per garage size"
+      },
+      {
+        "name": "HOA carry",
+        "state": "pass",
+        "value": "none",
+        "rule": "<= $1,200/yr"
+      },
+      {
+        "name": "Public sewer",
+        "state": "unknown",
+        "value": "not stated",
+        "rule": "Public sewer preferred; septic needs health jurisdiction capacity sign-off"
+      },
+      {
+        "name": "County tax rate known",
+        "state": "pass",
+        "value": "Lewis",
+        "rule": "Thurston / Lewis levy table"
+      }
+    ],
+    "fails": [],
+    "unknowns": [
+      "Public sewer"
+    ],
+    "garage_sf": 720,
+    "garage_beds": 3
+  },
+  "last_result": {
+    "run_date": "2026-10-25",
+    "best_score": 4.600905268654267,
+    "verdict": "PASS",
+    "best_case": "At asking $540,000, best tested rent $6,000/mo -> score 4.6/10, $1,184/mo cash flow, IRR 4.8%",
+    "asking_score": 4.600905268654267,
+    "asking_verdict": "PASS",
+    "asking_case": {
+      "price": 540000,
+      "rent": 6000,
+      "score": 4.6,
+      "npv": 52640,
+      "irr": 4.76,
+      "cf_mo": 1184,
+      "roi_pct": 122.9
+    },
+    "grid_best_score": 6.610263638420898,
+    "grid_best_verdict": "CONDITIONAL",
+    "rent_needed_at_ask": 6675,
+    "max_price_at_top_rent": 455000,
+    "cash_needed": 235800,
+    "passing_combos": 1,
+    "top": [
+      {
+        "price": 450000,
+        "rent": 6000,
+        "score": 6.61,
+        "irr": 7.88,
+        "cf_mo": 1748
+      },
+      {
+        "price": 475000,
+        "rent": 6000,
+        "score": 5.95,
+        "irr": 6.94,
+        "cf_mo": 1592
+      },
+      {
+        "price": 500000,
+        "rent": 6000,
+        "score": 5.34,
+        "irr": 6.05,
+        "cf_mo": 1435
+      },
+      {
+        "price": 525000,
+        "rent": 6000,
+        "score": 4.87,
+        "irr": 5.23,
+        "cf_mo": 1278
+      },
+      {
+        "price": 450000,
+        "rent": 5375,
+        "score": 4.62,
+        "irr": 4.74,
+        "cf_mo": 1255
+      }
+    ]
+  }
+}

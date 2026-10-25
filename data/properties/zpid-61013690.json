@@ -1,0 +1,164 @@
+{
+  "source": "Zillow",
+  "zpid": "61013690",
+  "url": "https://www.zillow.com/homedetails/1715-Ham-Hill-Rd-Centralia-WA-98531/61013690_zpid/",
+  "address": "1715 Ham Hill Road, Centralia, WA 98531",
+  "street": "1715 Ham Hill Road",
+  "city": "Centralia",
+  "state": "WA",
+  "zip": "98531",
+  "county": "Lewis",
+  "price": 545000,
+  "status": "FOR_SALE",
+  "beds": 3,
+  "baths": 2,
+  "sqft": 2592,
+  "lot_acres": 0.45999999999999996,
+  "year_built": null,
+  "home_type": "SINGLE_FAMILY",
+  "hoa_monthly": null,
+  "tax_annual": 3488,
+  "tax_rate": 0.0064,
+  "parking": [
+    "Attached Garage",
+    "RV Parking"
+  ],
+  "garage_yn": true,
+  "garage_spaces": null,
+  "garage_sf_est": null,
+  "garage_dims": null,
+  "mls_id": "2587186",
+  "subdivision": null,
+  "zoning": null,
+  "sewer": null,
+  "water": null,
+  "heating": null,
+  "cooling": null,
+  "description": "A glimpse of the mountains from your expansive new deck is just the beginning! This updated 2,592+/- sq ft home sits on .46+/- acre and offers 3 bedrooms PLUS a den/office/craft room and 2 bathrooms, including one with a jetted soaking tub. An abundance of natural light fills the main level, where the open-concept kitchen flows into the living spaces and a two-way gas fireplace brings warmth to the heart of the home. The spacious primary suite has French doors leading directly outside—an easy place to start the morning or wind down at the end of the day. Downstairs is where this floor plan really opens up the possibilities. The finished walk-out daylight basement is set up for multigenerational or separate living with its own exterior entrance, kitchen area, bedroom, bath, laundry and living space. Use it for extended guests, a dedicated work-from-home space, hobbies or simply another place to spread out—the flexibility is already here. Fresh interior paint, a new roof, composite decking and modern railing are already done. Outside, the fully fenced yard offers garden space and plenty of room to enjoy the outdoors, and all appliances stay. With nearly half an acre, thoughtful updat",
+  "days_on_market": null,
+  "zestimate": 539900,
+  "rent_zestimate": 2376,
+  "fetched_at": "2026-10-25T18:36:42.396Z",
+  "nwmls_price": 545000,
+  "source_area": "98531",
+  "slug": "1715-ham-hill-road-centralia-wa-98531",
+  "screen": {
+    "pass": true,
+    "checks": [
+      {
+        "name": "Listing price inside scenario band",
+        "state": "pass",
+        "value": 545000,
+        "rule": "$450,000 - $550,000"
+      },
+      {
+        "name": "Actively for sale",
+        "state": "pass",
+        "value": "FOR_SALE",
+        "rule": "Active / coming soon"
+      },
+      {
+        "name": "Single-family residence",
+        "state": "pass",
+        "value": "SINGLE_FAMILY",
+        "rule": "Detached house (AFH occupancy)"
+      },
+      {
+        "name": "Bedrooms for the existing home",
+        "state": "pass",
+        "value": 3,
+        "rule": ">= 3 bd in main home"
+      },
+      {
+        "name": "Garage to convert",
+        "state": "pass",
+        "value": "Attached Garage, RV Parking",
+        "rule": ">= 400 sf garage (2 bedrooms needs ~500-689 sf, 3 needs ~690-736 sf)"
+      },
+      {
+        "name": "HOA carry",
+        "state": "pass",
+        "value": "none",
+        "rule": "<= $1,200/yr"
+      },
+      {
+        "name": "Public sewer",
+        "state": "unknown",
+        "value": "not stated",
+        "rule": "Public sewer preferred; septic needs health jurisdiction capacity sign-off"
+      },
+      {
+        "name": "County tax rate known",
+        "state": "pass",
+        "value": "Lewis",
+        "rule": "Thurston / Lewis levy table"
+      }
+    ],
+    "fails": [],
+    "unknowns": [
+      "Public sewer"
+    ],
+    "garage_sf": null,
+    "garage_beds": null
+  },
+  "last_result": {
+    "run_date": "2026-10-25",
+    "best_score": 4.49978283190043,
+    "verdict": "PASS",
+    "best_case": "At asking $545,000, best tested rent $6,000/mo -> score 4.5/10, $1,153/mo cash flow, IRR 4.6%",
+    "asking_score": 4.49978283190043,
+    "asking_verdict": "PASS",
+    "asking_case": {
+      "price": 545000,
+      "rent": 6000,
+      "score": 4.5,
+      "npv": 51275,
+      "irr": 4.61,
+      "cf_mo": 1153,
+      "roi_pct": 122.2
+    },
+    "grid_best_score": 6.610263638420898,
+    "grid_best_verdict": "CONDITIONAL",
+    "rent_needed_at_ask": 6725,
+    "max_price_at_top_rent": 455000,
+    "cash_needed": 237150,
+    "passing_combos": 1,
+    "top": [
+      {
+        "price": 450000,
+        "rent": 6000,
+        "score": 6.61,
+        "irr": 7.88,
+        "cf_mo": 1748
+      },
+      {
+        "price": 475000,
+        "rent": 6000,
+        "score": 5.95,
+        "irr": 6.94,
+        "cf_mo": 1592
+      },
+      {
+        "price": 500000,
+        "rent": 6000,
+        "score": 5.34,
+        "irr": 6.05,
+        "cf_mo": 1435
+      },
+      {
+        "price": 525000,
+        "rent": 6000,
+        "score": 4.87,
+        "irr": 5.23,
+        "cf_mo": 1278
+      },
+      {
+        "price": 450000,
+        "rent": 5375,
+        "score": 4.62,
+        "irr": 4.74,
+        "cf_mo": 1255
+      }
+    ]
+  }
+}

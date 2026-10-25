@@ -1,0 +1,105 @@
+{
+  "source": "Zillow",
+  "zpid": "61025141",
+  "url": "https://www.zillow.com/homedetails/117-Stan-View-Dr-Napavine-WA-98532/61025141_zpid/",
+  "address": "117 Stan View Drive, Napavine, WA 98532",
+  "street": "117 Stan View Drive",
+  "city": "Napavine",
+  "state": "WA",
+  "zip": "98532",
+  "county": "Lewis",
+  "price": 485000,
+  "status": "FOR_SALE",
+  "beds": 3,
+  "baths": 2,
+  "sqft": 1440,
+  "lot_acres": 2.6,
+  "year_built": null,
+  "home_type": "SINGLE_FAMILY",
+  "hoa_monthly": null,
+  "tax_annual": 3104,
+  "tax_rate": 0.0064,
+  "parking": [
+    "Attached Carport",
+    "RV Parking"
+  ],
+  "garage_yn": false,
+  "garage_spaces": null,
+  "garage_sf_est": null,
+  "garage_dims": null,
+  "mls_id": "2593052",
+  "subdivision": null,
+  "zoning": null,
+  "sewer": null,
+  "water": null,
+  "heating": null,
+  "cooling": null,
+  "description": "A woodland escape with everyday convenience remarkably close. Tucked beneath towering evergreens and adjacent to Matilda Jackson State Park, this three-bedroom, two-bath home feels like a natural extension of the surrounding forest. Sunlight filters through the canopy, little pathways meander through the grounds, and shaded spaces invite quiet mornings and unhurried afternoons. It’s a setting that feels wonderfully removed, yet I-5, shopping, dining, and everyday essentials are just minutes away. Inside, generous windows and skylights bring in natural light and frame the greenery beyond. New LVP flooring, fresh paint, and select updated fixtures give the home a refreshed feel, while a new front deck offers a welcoming place to enjoy the outdoors. Covered RV parking with a metal roof and an outbuilding with electricity add practical space for parking, projects, and storage. With nearby state parks, hiking trails, and Pacific Northwest scenery to explore, this is perfect for those who want to take full advantage of the area’s natural beauty. A rare combination of woodland privacy, natural beauty, and convenience. A true place to slow down without feeling far away.",
+  "days_on_market": null,
+  "zestimate": 481800,
+  "rent_zestimate": 2314,
+  "fetched_at": "2026-10-25T18:36:47.789Z",
+  "nwmls_price": 485000,
+  "source_area": "98532",
+  "screen": {
+    "pass": false,
+    "checks": [
+      {
+        "name": "Listing price inside scenario band",
+        "state": "pass",
+        "value": 485000,
+        "rule": "$450,000 - $550,000"
+      },
+      {
+        "name": "Actively for sale",
+        "state": "pass",
+        "value": "FOR_SALE",
+        "rule": "Active / coming soon"
+      },
+      {
+        "name": "Single-family residence",
+        "state": "pass",
+        "value": "SINGLE_FAMILY",
+        "rule": "Detached house (AFH occupancy)"
+      },
+      {
+        "name": "Bedrooms for the existing home",
+        "state": "pass",
+        "value": 3,
+        "rule": ">= 3 bd in main home"
+      },
+      {
+        "name": "Garage to convert",
+        "state": "fail",
+        "value": "Attached Carport, RV Parking",
+        "rule": ">= 400 sf garage (2 bedrooms needs ~500-689 sf, 3 needs ~690-736 sf)"
+      },
+      {
+        "name": "HOA carry",
+        "state": "pass",
+        "value": "none",
+        "rule": "<= $1,200/yr"
+      },
+      {
+        "name": "Public sewer",
+        "state": "unknown",
+        "value": "not stated",
+        "rule": "Public sewer preferred; septic needs health jurisdiction capacity sign-off"
+      },
+      {
+        "name": "County tax rate known",
+        "state": "pass",
+        "value": "Lewis",
+        "rule": "Thurston / Lewis levy table"
+      }
+    ],
+    "fails": [
+      "Garage to convert"
+    ],
+    "unknowns": [
+      "Public sewer"
+    ],
+    "garage_sf": null,
+    "garage_beds": null
+  }
+}

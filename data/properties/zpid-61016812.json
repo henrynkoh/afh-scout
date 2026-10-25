@@ -1,0 +1,165 @@
+{
+  "source": "Zillow",
+  "zpid": "61016812",
+  "url": "https://www.zillow.com/homedetails/850-SW-18th-St-Chehalis-WA-98532/61016812_zpid/",
+  "address": "850 SW 18th Street, Chehalis, WA 98532",
+  "street": "850 SW 18th Street",
+  "city": "Chehalis",
+  "state": "WA",
+  "zip": "98532",
+  "county": "Lewis",
+  "price": 499000,
+  "status": "FOR_SALE",
+  "beds": 3,
+  "baths": 2,
+  "sqft": 2094,
+  "lot_acres": 0.27999999999999997,
+  "year_built": null,
+  "home_type": "SINGLE_FAMILY",
+  "hoa_monthly": null,
+  "tax_annual": 3194,
+  "tax_rate": 0.0064,
+  "parking": [
+    "Attached Garage",
+    "Detached Garage",
+    "RV Parking"
+  ],
+  "garage_yn": true,
+  "garage_spaces": null,
+  "garage_sf_est": null,
+  "garage_dims": null,
+  "mls_id": "2593560",
+  "subdivision": null,
+  "zoning": null,
+  "sewer": null,
+  "water": null,
+  "heating": null,
+  "cooling": null,
+  "description": "Rare find. Retired builders personal home and huge shop in a quiet neighborhood setting.  Vaulted living/dining area. Large kitchen with abundant cabinets and island designed for large gatherings.  Spacaious utility/laundry area.  Enclosed sun/sitting room flooded with natural light. Large compsite deck overlooks landscaped yard and garden area.  Then the SHOP.  Rv height with wood working shop.  Lofts for storage and a private office. Property has own well for irrigation and a RV drop. All this and an attractive price.  Do not delay.",
+  "days_on_market": null,
+  "zestimate": 494400,
+  "rent_zestimate": 1751,
+  "fetched_at": "2026-10-25T18:44:38.484Z",
+  "nwmls_price": 499000,
+  "source_area": "98532",
+  "slug": "850-sw-18th-street-chehalis-wa-98532",
+  "screen": {
+    "pass": true,
+    "checks": [
+      {
+        "name": "Listing price inside scenario band",
+        "state": "pass",
+        "value": 499000,
+        "rule": "$450,000 - $550,000"
+      },
+      {
+        "name": "Actively for sale",
+        "state": "pass",
+        "value": "FOR_SALE",
+        "rule": "Active / coming soon"
+      },
+      {
+        "name": "Single-family residence",
+        "state": "pass",
+        "value": "SINGLE_FAMILY",
+        "rule": "Detached house (AFH occupancy)"
+      },
+      {
+        "name": "Bedrooms for the existing home",
+        "state": "pass",
+        "value": 3,
+        "rule": ">= 3 bd in main home"
+      },
+      {
+        "name": "Garage to convert",
+        "state": "pass",
+        "value": "Attached Garage, Detached Garage, RV Parking",
+        "rule": ">= 400 sf garage (2 bedrooms needs ~500-689 sf, 3 needs ~690-736 sf)"
+      },
+      {
+        "name": "HOA carry",
+        "state": "pass",
+        "value": "none",
+        "rule": "<= $1,200/yr"
+      },
+      {
+        "name": "Public sewer",
+        "state": "unknown",
+        "value": "not stated",
+        "rule": "Public sewer preferred; septic needs health jurisdiction capacity sign-off"
+      },
+      {
+        "name": "County tax rate known",
+        "state": "pass",
+        "value": "Lewis",
+        "rule": "Thurston / Lewis levy table"
+      }
+    ],
+    "fails": [],
+    "unknowns": [
+      "Public sewer"
+    ],
+    "garage_sf": null,
+    "garage_beds": null
+  },
+  "last_result": {
+    "run_date": "2026-10-25",
+    "best_score": 5.364264625672351,
+    "verdict": "MARGINAL",
+    "best_case": "At asking $499,000, best tested rent $6,000/mo -> score 5.4/10, $1,441/mo cash flow, IRR 6.1%",
+    "asking_score": 5.364264625672351,
+    "asking_verdict": "MARGINAL",
+    "asking_case": {
+      "price": 499000,
+      "rent": 6000,
+      "score": 5.36,
+      "npv": 63837,
+      "irr": 6.09,
+      "cf_mo": 1441,
+      "roi_pct": 129
+    },
+    "grid_best_score": 6.610263638420898,
+    "grid_best_verdict": "CONDITIONAL",
+    "rent_needed_at_ask": 6350,
+    "max_price_at_top_rent": 455000,
+    "cash_needed": 224730,
+    "passing_combos": 1,
+    "top": [
+      {
+        "price": 450000,
+        "rent": 6000,
+        "score": 6.61,
+        "irr": 7.88,
+        "cf_mo": 1748
+      },
+      {
+        "price": 475000,
+        "rent": 6000,
+        "score": 5.95,
+        "irr": 6.94,
+        "cf_mo": 1592
+      },
+      {
+        "price": 500000,
+        "rent": 6000,
+        "score": 5.34,
+        "irr": 6.05,
+        "cf_mo": 1435
+      },
+      {
+        "price": 525000,
+        "rent": 6000,
+        "score": 4.87,
+        "irr": 5.23,
+        "cf_mo": 1278
+      },
+      {
+        "price": 450000,
+        "rent": 5375,
+        "score": 4.62,
+        "irr": 4.74,
+        "cf_mo": 1255
+      }
+    ]
+  }
+}
