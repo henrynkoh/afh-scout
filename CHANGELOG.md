@@ -10,4 +10,4 @@
 - HTML and Markdown reports, heatmap and top-five chart
 - WABO / DSHS due-diligence checklist
 - Daily wrapper, launchd installer, logs and lock control
-- 15 self-tests including score monotonicity
+- 17 self-tests including score monotonicity

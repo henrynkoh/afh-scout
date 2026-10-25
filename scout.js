@@ -373,6 +373,13 @@ function cmdSelftest() {
   const priceNeeded = levers.priceForScore({ county: 'Lewis' }, cfg, 5000, cfg.filters.min_score);
   ok('price lever solves', priceNeeded != null && priceNeeded < 550000, priceNeeded ? '$' + priceNeeded + ' at $5,000/mo' : 'no solution');
 
+  const unknownGarage = screenProperty({ price: 500000, status: 'FOR_SALE', home_type: 'SINGLE_FAMILY', beds: 3, garage_yn: true, county: 'Lewis' }, cfg);
+  const unknownGarageCheck = unknownGarage.checks.find((c) => c.name === 'Garage to convert');
+  ok('garage without size stays CHECK', unknownGarageCheck && unknownGarageCheck.state === 'unknown', unknownGarageCheck ? unknownGarageCheck.state : 'missing');
+  const smallGarage = screenProperty({ price: 500000, status: 'FOR_SALE', home_type: 'SINGLE_FAMILY', beds: 3, garage_yn: true, garage_sf_est: 300, county: 'Lewis' }, cfg);
+  const smallGarageCheck = smallGarage.checks.find((c) => c.name === 'Garage to convert');
+  ok('undersized garage hard-fails', smallGarageCheck && smallGarageCheck.state === 'fail', smallGarageCheck ? smallGarageCheck.state : 'missing');
+
   let fails = 0;
   for (const r of results) {
     console.log(`${r.pass ? 'PASS' : 'FAIL'}  ${r.name}${r.detail ? '  (' + r.detail + ')' : ''}`);

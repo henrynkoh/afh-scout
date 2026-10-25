@@ -8,7 +8,7 @@ Three steps. Each one is a single command, run from the app folder.
 
     node scout.js selftest
 
-You should see `15/15 checks passed`.
+You should see `17/17 checks passed`.
 
 **2. Analyse a Zillow link**
 

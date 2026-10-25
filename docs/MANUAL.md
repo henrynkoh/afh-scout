@@ -10,7 +10,7 @@ property facts from the listing's Zillow page, and the mortgage rate from Freddi
 
 ## 2. Routine execution
 
-`.github/workflows/daily-afh-monitor.yml` is the primary unattended routine. It schedules at both UTC offsets for Pacific time and a clock gate runs only at 7 AM locally, so daylight-saving changes do not create a second daily run. The job refreshes the rate, runs the monitor, rescales every saved candidate at its actual asking price, runs 15 controls, rebuilds the index, and commits `data/state.json`, `data/properties/`, and `out/`. The optional Mac fallback is `install-routine.sh`.
+`.github/workflows/daily-afh-monitor.yml` is the primary unattended routine. It schedules at both UTC offsets for Pacific time and a clock gate runs only at 7 AM locally, so daylight-saving changes do not create a second daily run. The job refreshes the rate, runs the monitor, rescales every saved candidate at its actual asking price, runs 17 controls, rebuilds the index, and commits `data/state.json`, `data/properties/`, and `out/`. The optional Mac fallback is `install-routine.sh`.
 
 ## 3. Commands
 
@@ -45,7 +45,7 @@ routine calls.
 ### `add`, `list`, `rescore`, `rate`, `index`, `selftest`
 `add` saves a property without modelling it. `list` shows saved properties sorted by the actual asking-price score. `rescore` recalculates every saved passing home after a rate or assumption change.
 `rate` pulls the latest 30-year fixed rate from FRED and writes it into the config.
-`index` rebuilds `out/index.html`. `selftest` runs 15 assertions.
+`index` rebuilds `out/index.html`. `selftest` runs 17 assertions.
 
 ## 4. The numbers
 
