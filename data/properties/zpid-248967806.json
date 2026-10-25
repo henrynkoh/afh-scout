@@ -1,0 +1,106 @@
+{
+  "source": "Zillow",
+  "zpid": "248967806",
+  "url": "https://www.zillow.com/homedetails/2217-Sirkka-St-Centralia-WA-98531/248967806_zpid/",
+  "address": "2217 Sirkka Ave, Centralia, WA 98531",
+  "street": "2217 Sirkka Ave",
+  "city": "Centralia",
+  "state": "WA",
+  "zip": "98531",
+  "county": "Lewis",
+  "price": 565000,
+  "status": "FOR_SALE",
+  "beds": 3,
+  "baths": 2,
+  "sqft": 1450,
+  "lot_acres": 0.85,
+  "year_built": null,
+  "home_type": "SINGLE_FAMILY",
+  "hoa_monthly": null,
+  "tax_annual": 3616,
+  "tax_rate": 0.0064,
+  "parking": [
+    "Driveway",
+    "Attached Garage",
+    "Off Street"
+  ],
+  "garage_yn": true,
+  "garage_spaces": null,
+  "garage_sf_est": null,
+  "garage_dims": null,
+  "mls_id": "2539916",
+  "subdivision": null,
+  "zoning": null,
+  "sewer": null,
+  "water": null,
+  "heating": null,
+  "cooling": null,
+  "description": "Beautiful one-story home situated on approximately 0.85 acres offering the perfect blend of comfort, functionality, and outdoor living. Built in 2018, this well-maintained 3-bedroom, 2-bath home features approximately 1,450 square feet, a spacious 720-square-foot attached garage, heat pump, and a desirable open-concept layout.Step outside and enjoy the fully fenced backyard, covered front porch, patio area, and an impressive gardener’s setup complete with a large fenced garden space, greenhouse, storage shed, and covered storage area. The property offers room to spread out while still being conveniently located near town.The home’s condition reflects pride of ownership throughout. Whether you’re looking for space to garden, entertain, store equipment, or simply enjoy a peaceful setting, this property offers a rare combination of usable land and modern amenities.Served by private well and septic, this property provides the benefits of country-style living while remaining close to shopping, schools, and local services. Move-in ready and packed with features that are increasingly difficult to find, this is a property that must be seen to be fully appreciated.",
+  "days_on_market": null,
+  "zestimate": 562900,
+  "rent_zestimate": 2291,
+  "fetched_at": "2026-10-25T18:36:43.775Z",
+  "nwmls_price": 565000,
+  "source_area": "98531",
+  "screen": {
+    "pass": false,
+    "checks": [
+      {
+        "name": "Listing price inside scenario band",
+        "state": "fail",
+        "value": 565000,
+        "rule": "$450,000 - $550,000"
+      },
+      {
+        "name": "Actively for sale",
+        "state": "pass",
+        "value": "FOR_SALE",
+        "rule": "Active / coming soon"
+      },
+      {
+        "name": "Single-family residence",
+        "state": "pass",
+        "value": "SINGLE_FAMILY",
+        "rule": "Detached house (AFH occupancy)"
+      },
+      {
+        "name": "Bedrooms for the existing home",
+        "state": "pass",
+        "value": 3,
+        "rule": ">= 3 bd in main home"
+      },
+      {
+        "name": "Garage to convert",
+        "state": "pass",
+        "value": "Driveway, Attached Garage, Off Street",
+        "rule": ">= 400 sf garage (2 bedrooms needs ~500-689 sf, 3 needs ~690-736 sf)"
+      },
+      {
+        "name": "HOA carry",
+        "state": "pass",
+        "value": "none",
+        "rule": "<= $1,200/yr"
+      },
+      {
+        "name": "Public sewer",
+        "state": "unknown",
+        "value": "not stated",
+        "rule": "Public sewer preferred; septic needs health jurisdiction capacity sign-off"
+      },
+      {
+        "name": "County tax rate known",
+        "state": "pass",
+        "value": "Lewis",
+        "rule": "Thurston / Lewis levy table"
+      }
+    ],
+    "fails": [
+      "Listing price inside scenario band"
+    ],
+    "unknowns": [
+      "Public sewer"
+    ],
+    "garage_sf": null,
+    "garage_beds": null
+  }
+}

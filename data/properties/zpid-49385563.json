@@ -1,0 +1,164 @@
+{
+  "source": "Zillow",
+  "zpid": "49385563",
+  "url": "https://www.zillow.com/homedetails/5705-SE-57th-Ave-Lacey-WA-98503/49385563_zpid/",
+  "address": "5705 57th Avenue SE, Lacey, WA 98503",
+  "street": "5705 57th Avenue SE",
+  "city": "Lacey",
+  "state": "WA",
+  "zip": "98503",
+  "county": "Thurston",
+  "price": 474900,
+  "status": "FOR_SALE",
+  "beds": 3,
+  "baths": 2,
+  "sqft": 1366,
+  "lot_acres": 5122.656,
+  "year_built": null,
+  "home_type": "SINGLE_FAMILY",
+  "hoa_monthly": 33,
+  "tax_annual": 3847,
+  "tax_rate": 0.008100000000000001,
+  "parking": [
+    "Driveway",
+    "Attached Garage"
+  ],
+  "garage_yn": true,
+  "garage_spaces": null,
+  "garage_sf_est": null,
+  "garage_dims": null,
+  "mls_id": "2554752",
+  "subdivision": null,
+  "zoning": null,
+  "sewer": null,
+  "water": null,
+  "heating": null,
+  "cooling": null,
+  "description": "Charming, affordable Lloyd Thola-built rambler in highly desirable Emerald Heights neighborhood in Lacey! Ideally located near Capitol City Golf Club, parks, shopping, restaurants, schools, everyday amenities & with easy access to JBLM, this move-in-ready home offers comfort, style & exceptional value. Beautiful hardwood floors flow throughout the open-concept floor plan, creating a warm & inviting living space filled with natural light. The updated kitchen (2023) features stunning granite countertops, full-height tile backsplash, recessed lighting & included stainless steel appliances, making it perfect for everyday living & entertaining. Vaulted ceilings & bay windows enhance a spacious feel throughout the home. Both bathrooms were tastefully remodeled (2023), including updated primary 3/4 bath with new shower stall & heads, while new light fixtures throughout provide a fresh, modern touch. Stay comfortable in every season with efficient ductless mini-split heating & A/C. Step outside to enjoy the large fully-fenced backyard featuring an expansive patio that's ideal for BBQs, gatherings, or relaxing evenings, plus an irrigation system to keep the landscaping looking its best. New",
+  "days_on_market": null,
+  "zestimate": 475000,
+  "rent_zestimate": 2465,
+  "fetched_at": "2026-10-25T18:44:57.390Z",
+  "nwmls_price": 474900,
+  "source_area": "98503",
+  "screen": {
+    "pass": true,
+    "checks": [
+      {
+        "name": "Listing price inside scenario band",
+        "state": "pass",
+        "value": 474900,
+        "rule": "$450,000 - $550,000"
+      },
+      {
+        "name": "Actively for sale",
+        "state": "pass",
+        "value": "FOR_SALE",
+        "rule": "Active / coming soon"
+      },
+      {
+        "name": "Single-family residence",
+        "state": "pass",
+        "value": "SINGLE_FAMILY",
+        "rule": "Detached house (AFH occupancy)"
+      },
+      {
+        "name": "Bedrooms for the existing home",
+        "state": "pass",
+        "value": 3,
+        "rule": ">= 3 bd in main home"
+      },
+      {
+        "name": "Garage to convert",
+        "state": "pass",
+        "value": "Driveway, Attached Garage",
+        "rule": ">= 400 sf garage (2 bedrooms needs ~500-689 sf, 3 needs ~690-736 sf)"
+      },
+      {
+        "name": "HOA carry",
+        "state": "pass",
+        "value": "$33/mo",
+        "rule": "<= $1,200/yr"
+      },
+      {
+        "name": "Public sewer",
+        "state": "unknown",
+        "value": "not stated",
+        "rule": "Public sewer preferred; septic needs health jurisdiction capacity sign-off"
+      },
+      {
+        "name": "County tax rate known",
+        "state": "pass",
+        "value": "Thurston",
+        "rule": "Thurston / Lewis levy table"
+      }
+    ],
+    "fails": [],
+    "unknowns": [
+      "Public sewer"
+    ],
+    "garage_sf": null,
+    "garage_beds": null
+  },
+  "slug": "5705-57th-avenue-se-lacey-wa-98503",
+  "last_result": {
+    "run_date": "2026-10-25",
+    "best_score": 5.683506218580105,
+    "verdict": "MARGINAL",
+    "best_case": "At asking $474,900, best tested rent $6,000/mo -> score 5.7/10, $1,528/mo cash flow, IRR 6.5%",
+    "asking_score": 5.683506218580105,
+    "asking_verdict": "MARGINAL",
+    "asking_case": {
+      "price": 474900,
+      "rent": 6000,
+      "score": 5.68,
+      "npv": 66311,
+      "irr": 6.54,
+      "cf_mo": 1528,
+      "roi_pct": 130.9
+    },
+    "grid_best_score": 6.327696746224219,
+    "grid_best_verdict": "CONDITIONAL",
+    "rent_needed_at_ask": 6250,
+    "max_price_at_top_rent": 445000,
+    "cash_needed": 218223,
+    "passing_combos": 0,
+    "top": [
+      {
+        "price": 450000,
+        "rent": 6000,
+        "score": 6.33,
+        "irr": 7.49,
+        "cf_mo": 1685
+      },
+      {
+        "price": 475000,
+        "rent": 6000,
+        "score": 5.68,
+        "irr": 6.54,
+        "cf_mo": 1527
+      },
+      {
+        "price": 500000,
+        "rent": 6000,
+        "score": 5.11,
+        "irr": 5.66,
+        "cf_mo": 1369
+      },
+      {
+        "price": 525000,
+        "rent": 6000,
+        "score": 4.65,
+        "irr": 4.84,
+        "cf_mo": 1210
+      },
+      {
+        "price": 450000,
+        "rent": 5375,
+        "score": 4.4,
+        "irr": 4.34,
+        "cf_mo": 1192
+      }
+    ]
+  }
+}

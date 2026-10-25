@@ -1,0 +1,164 @@
+{
+  "source": "Zillow",
+  "zpid": "157374347",
+  "url": "https://www.zillow.com/homedetails/7021-Alta-Vista-Dr-SE-Tumwater-WA-98501/157374347_zpid/",
+  "address": "7021 Alta Vista Drive SE, Tumwater, WA 98501",
+  "street": "7021 Alta Vista Drive SE",
+  "city": "Tumwater",
+  "state": "WA",
+  "zip": "98501",
+  "county": "Thurston",
+  "price": 499999,
+  "status": "FOR_SALE",
+  "beds": 3,
+  "baths": 2,
+  "sqft": 1500,
+  "lot_acres": 4499.748,
+  "year_built": null,
+  "home_type": "SINGLE_FAMILY",
+  "hoa_monthly": 22,
+  "tax_annual": 4050,
+  "tax_rate": 0.008100000000000001,
+  "parking": [
+    "Attached Garage",
+    "Off Street"
+  ],
+  "garage_yn": true,
+  "garage_spaces": null,
+  "garage_sf_est": null,
+  "garage_dims": null,
+  "mls_id": "2592848",
+  "subdivision": null,
+  "zoning": null,
+  "sewer": null,
+  "water": null,
+  "heating": null,
+  "cooling": null,
+  "description": "PRE-INSPECTED AND MOVE-IN READY! Everything on one level, nothing left on your to-do list. Built in 2018 this 3 bed, 2 bath Blakely plan offers 1,500 sq ft of easy, move-in-ready living in Tumwater’s Deschutes River Highlands. The heart of the home is a kitchen with quartz countertops, warm wood cabinetry, and a full appliance package that stays with the home  . It opens to a dedicated dining area, ready for weeknight dinners and holiday gatherings. The primary suite is a true retreat with its own bath and a spacious walk-in closet, and two more bedrooms give you room for guests, an office, or hobbies. Durable vinyl plank flooring, a high-efficiency gas furnace, and double-pane windows keep things comfortable and low-maintenance. Step outside to a fully fenced, level yard with a patio for summer evenings and room for pets to roam. Covered entry, attached two-car garage, washer, dryer, and fridge all stay. Low $22/mo HOA. Quick I-5 access puts Olympia, Lacey, and JBLM within easy reach. See you soon!",
+  "days_on_market": null,
+  "zestimate": 498900,
+  "rent_zestimate": 2603,
+  "fetched_at": "2026-10-25T18:44:41.670Z",
+  "nwmls_price": 499999,
+  "source_area": "98501",
+  "slug": "7021-alta-vista-drive-se-tumwater-wa-98501",
+  "screen": {
+    "pass": true,
+    "checks": [
+      {
+        "name": "Listing price inside scenario band",
+        "state": "pass",
+        "value": 499999,
+        "rule": "$450,000 - $550,000"
+      },
+      {
+        "name": "Actively for sale",
+        "state": "pass",
+        "value": "FOR_SALE",
+        "rule": "Active / coming soon"
+      },
+      {
+        "name": "Single-family residence",
+        "state": "pass",
+        "value": "SINGLE_FAMILY",
+        "rule": "Detached house (AFH occupancy)"
+      },
+      {
+        "name": "Bedrooms for the existing home",
+        "state": "pass",
+        "value": 3,
+        "rule": ">= 3 bd in main home"
+      },
+      {
+        "name": "Garage to convert",
+        "state": "pass",
+        "value": "Attached Garage, Off Street",
+        "rule": ">= 400 sf garage (2 bedrooms needs ~500-689 sf, 3 needs ~690-736 sf)"
+      },
+      {
+        "name": "HOA carry",
+        "state": "pass",
+        "value": "$22/mo",
+        "rule": "<= $1,200/yr"
+      },
+      {
+        "name": "Public sewer",
+        "state": "unknown",
+        "value": "not stated",
+        "rule": "Public sewer preferred; septic needs health jurisdiction capacity sign-off"
+      },
+      {
+        "name": "County tax rate known",
+        "state": "pass",
+        "value": "Thurston",
+        "rule": "Thurston / Lewis levy table"
+      }
+    ],
+    "fails": [],
+    "unknowns": [
+      "Public sewer"
+    ],
+    "garage_sf": null,
+    "garage_beds": null
+  },
+  "last_result": {
+    "run_date": "2026-10-25",
+    "best_score": 5.14776596437612,
+    "verdict": "MARGINAL",
+    "best_case": "At asking $499,999, best tested rent $6,000/mo -> score 5.1/10, $1,380/mo cash flow, IRR 5.7%",
+    "asking_score": 5.14776596437612,
+    "asking_verdict": "MARGINAL",
+    "asking_case": {
+      "price": 499999,
+      "rent": 6000,
+      "score": 5.15,
+      "npv": 60050,
+      "irr": 5.73,
+      "cf_mo": 1380,
+      "roi_pct": 127.2
+    },
+    "grid_best_score": 6.376641962868342,
+    "grid_best_verdict": "CONDITIONAL",
+    "rent_needed_at_ask": 6425,
+    "max_price_at_top_rent": 445000,
+    "cash_needed": 225000,
+    "passing_combos": 0,
+    "top": [
+      {
+        "price": 450000,
+        "rent": 6000,
+        "score": 6.38,
+        "irr": 7.55,
+        "cf_mo": 1696
+      },
+      {
+        "price": 475000,
+        "rent": 6000,
+        "score": 5.73,
+        "irr": 6.61,
+        "cf_mo": 1538
+      },
+      {
+        "price": 500000,
+        "rent": 6000,
+        "score": 5.15,
+        "irr": 5.73,
+        "cf_mo": 1380
+      },
+      {
+        "price": 525000,
+        "rent": 6000,
+        "score": 4.69,
+        "irr": 4.9,
+        "cf_mo": 1221
+      },
+      {
+        "price": 450000,
+        "rent": 5375,
+        "score": 4.44,
+        "irr": 4.41,
+        "cf_mo": 1203
+      }
+    ]
+  }
+}

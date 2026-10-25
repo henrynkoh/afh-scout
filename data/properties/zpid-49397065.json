@@ -1,0 +1,164 @@
+{
+  "source": "Zillow",
+  "zpid": "49397065",
+  "url": "https://www.zillow.com/homedetails/1215-Hall-St-SE-Lacey-WA-98503/49397065_zpid/",
+  "address": "1215 Hall Street SE, Lacey, WA 98503",
+  "street": "1215 Hall Street SE",
+  "city": "Lacey",
+  "state": "WA",
+  "zip": "98503",
+  "county": "Thurston",
+  "price": 474500,
+  "status": "FOR_SALE",
+  "beds": 3,
+  "baths": 2,
+  "sqft": 1604,
+  "lot_acres": 9182.448,
+  "year_built": 1955,
+  "home_type": "SINGLE_FAMILY",
+  "hoa_monthly": null,
+  "tax_annual": null,
+  "tax_rate": null,
+  "parking": [
+    "Attached Garage",
+    "RV Parking"
+  ],
+  "garage_yn": true,
+  "garage_spaces": null,
+  "garage_sf_est": null,
+  "garage_dims": null,
+  "mls_id": "2568425",
+  "subdivision": null,
+  "zoning": null,
+  "sewer": null,
+  "water": null,
+  "heating": null,
+  "cooling": null,
+  "description": "Freshly remodeled rambler in the heart of Lacey including NEW ROOF recently added! This beautifully updated home features all-new interior paint, laminate hardwood flooring & stylish new lighting throughout. The completely refreshed kitchen shines with new white cabinetry, quartz countertops, full tile backsplash & stainless steel appliances, offering plenty of space for cooking, gathering & entertaining. Enjoy two spacious living areas, including a new electric fireplace perfect for cozy PNW evenings. Stay comfortable year-round with an efficient heat pump providing warmth in the winter & cooling in the summer. The updated bath feels like a private retreat with a walk-in shower & luxury soaking tub. Step outside to a huge, fully-fenced backyard with a large deck accessible from both the living area & bedroom—perfect for entertaining, relaxing or creating your dream outdoor space. Plenty of room to garden, play & make it your own. Conveniently located near shopping, dining, parks, schools, I-5 & JBLM!",
+  "days_on_market": null,
+  "zestimate": null,
+  "rent_zestimate": 2381,
+  "fetched_at": "2026-10-25T18:44:55.321Z",
+  "nwmls_price": 474500,
+  "source_area": "98503",
+  "screen": {
+    "pass": true,
+    "checks": [
+      {
+        "name": "Listing price inside scenario band",
+        "state": "pass",
+        "value": 474500,
+        "rule": "$450,000 - $550,000"
+      },
+      {
+        "name": "Actively for sale",
+        "state": "pass",
+        "value": "FOR_SALE",
+        "rule": "Active / coming soon"
+      },
+      {
+        "name": "Single-family residence",
+        "state": "pass",
+        "value": "SINGLE_FAMILY",
+        "rule": "Detached house (AFH occupancy)"
+      },
+      {
+        "name": "Bedrooms for the existing home",
+        "state": "pass",
+        "value": 3,
+        "rule": ">= 3 bd in main home"
+      },
+      {
+        "name": "Garage to convert",
+        "state": "pass",
+        "value": "Attached Garage, RV Parking",
+        "rule": ">= 400 sf garage (2 bedrooms needs ~500-689 sf, 3 needs ~690-736 sf)"
+      },
+      {
+        "name": "HOA carry",
+        "state": "pass",
+        "value": "none",
+        "rule": "<= $1,200/yr"
+      },
+      {
+        "name": "Public sewer",
+        "state": "unknown",
+        "value": "not stated",
+        "rule": "Public sewer preferred; septic needs health jurisdiction capacity sign-off"
+      },
+      {
+        "name": "County tax rate known",
+        "state": "pass",
+        "value": "Thurston",
+        "rule": "Thurston / Lewis levy table"
+      }
+    ],
+    "fails": [],
+    "unknowns": [
+      "Public sewer"
+    ],
+    "garage_sf": null,
+    "garage_beds": null
+  },
+  "slug": "1215-hall-street-se-lacey-wa-98503",
+  "last_result": {
+    "run_date": "2026-10-25",
+    "best_score": 5.828711321094894,
+    "verdict": "MARGINAL",
+    "best_case": "At asking $474,500, best tested rent $6,000/mo -> score 5.8/10, $1,563/mo cash flow, IRR 6.8%",
+    "asking_score": 5.828711321094894,
+    "asking_verdict": "MARGINAL",
+    "asking_case": {
+      "price": 474500,
+      "rent": 6000,
+      "score": 5.83,
+      "npv": 68518,
+      "irr": 6.76,
+      "cf_mo": 1563,
+      "roi_pct": 132
+    },
+    "grid_best_score": 6.475029954689725,
+    "grid_best_verdict": "CONDITIONAL",
+    "rent_needed_at_ask": 6200,
+    "max_price_at_top_rent": 450000,
+    "cash_needed": 218115,
+    "passing_combos": 0,
+    "top": [
+      {
+        "price": 450000,
+        "rent": 6000,
+        "score": 6.48,
+        "irr": 7.69,
+        "cf_mo": 1718
+      },
+      {
+        "price": 475000,
+        "rent": 6000,
+        "score": 5.82,
+        "irr": 6.74,
+        "cf_mo": 1560
+      },
+      {
+        "price": 500000,
+        "rent": 6000,
+        "score": 5.22,
+        "irr": 5.86,
+        "cf_mo": 1402
+      },
+      {
+        "price": 525000,
+        "rent": 6000,
+        "score": 4.76,
+        "irr": 5.03,
+        "cf_mo": 1243
+      },
+      {
+        "price": 450000,
+        "rent": 5375,
+        "score": 4.51,
+        "irr": 4.55,
+        "cf_mo": 1225
+      }
+    ]
+  }
+}

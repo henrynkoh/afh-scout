@@ -1,0 +1,104 @@
+{
+  "source": "Zillow",
+  "zpid": "49383492",
+  "url": "https://www.zillow.com/homedetails/4702-24th-Ave-SE-Olympia-WA-98503/49383492_zpid/",
+  "address": "4702 24th Avenue SE, Olympia, WA 98503",
+  "street": "4702 24th Avenue SE",
+  "city": "Olympia",
+  "state": "WA",
+  "zip": "98503",
+  "county": "Thurston",
+  "price": 554000,
+  "status": "FOR_SALE",
+  "beds": 5,
+  "baths": 4,
+  "sqft": 2540,
+  "lot_acres": 9644.184,
+  "year_built": null,
+  "home_type": "SINGLE_FAMILY",
+  "hoa_monthly": null,
+  "tax_annual": 4487,
+  "tax_rate": 0.008100000000000001,
+  "parking": [
+    "Attached Garage"
+  ],
+  "garage_yn": true,
+  "garage_spaces": null,
+  "garage_sf_est": null,
+  "garage_dims": null,
+  "mls_id": "2597536",
+  "subdivision": null,
+  "zoning": null,
+  "sewer": null,
+  "water": null,
+  "heating": null,
+  "cooling": null,
+  "description": "Well located 2,500+ square foot 5 bed, 3.5 bath home with attached 2 car garage on a large lot.  New roof, kitchen tile, downstairs laminate, and carpets throughout, with updated plumbing, floor insulation, and fresh paint on cabinets and in many rooms - all in 2026. Downstairs has formal sunken living room with attached dining room; kitchen with breakfast nook; family room with fireplace; and a half bath. Upstairs has an oversize primary bedroom with jetted tub and 3 large closets including a walk-in; a second primary bedroom with walk-in shower; 3 additional guest bedrooms share a full bathroom in the upstairs hall.  The laundry room is also upstairs next to a large storage closet. Great multigenerational potential. The neighborhood enjoys great access to schools, parks and downtown shopping and restaurants. 5 minute walk to Mountain View Elementary ball fields and playground, or Chambers Lake walking trails. 10 minute walk to Wonderwood park with larger sports fields, tennis and pickleball courts. 10 minute drive to St Pete's Hospital, Lilly Road medical complex, dozens of restaurants, grocery stores, city hall, post office, and I-5. NO HOA.",
+  "days_on_market": null,
+  "zestimate": 553700,
+  "rent_zestimate": 3217,
+  "fetched_at": "2026-10-25T18:44:56.389Z",
+  "nwmls_price": 554000,
+  "source_area": "98503",
+  "screen": {
+    "pass": false,
+    "checks": [
+      {
+        "name": "Listing price inside scenario band",
+        "state": "fail",
+        "value": 554000,
+        "rule": "$450,000 - $550,000"
+      },
+      {
+        "name": "Actively for sale",
+        "state": "pass",
+        "value": "FOR_SALE",
+        "rule": "Active / coming soon"
+      },
+      {
+        "name": "Single-family residence",
+        "state": "pass",
+        "value": "SINGLE_FAMILY",
+        "rule": "Detached house (AFH occupancy)"
+      },
+      {
+        "name": "Bedrooms for the existing home",
+        "state": "pass",
+        "value": 5,
+        "rule": ">= 3 bd in main home"
+      },
+      {
+        "name": "Garage to convert",
+        "state": "pass",
+        "value": "Attached Garage",
+        "rule": ">= 400 sf garage (2 bedrooms needs ~500-689 sf, 3 needs ~690-736 sf)"
+      },
+      {
+        "name": "HOA carry",
+        "state": "pass",
+        "value": "none",
+        "rule": "<= $1,200/yr"
+      },
+      {
+        "name": "Public sewer",
+        "state": "unknown",
+        "value": "not stated",
+        "rule": "Public sewer preferred; septic needs health jurisdiction capacity sign-off"
+      },
+      {
+        "name": "County tax rate known",
+        "state": "pass",
+        "value": "Thurston",
+        "rule": "Thurston / Lewis levy table"
+      }
+    ],
+    "fails": [
+      "Listing price inside scenario band"
+    ],
+    "unknowns": [
+      "Public sewer"
+    ],
+    "garage_sf": null,
+    "garage_beds": null
+  }
+}

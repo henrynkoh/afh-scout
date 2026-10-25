@@ -1,0 +1,163 @@
+{
+  "source": "Zillow",
+  "zpid": "49404397",
+  "url": "https://www.zillow.com/homedetails/4721-Parkside-Dr-SE-Lacey-WA-98503/49404397_zpid/",
+  "address": "4721 Parkside Drive SE, Lacey, WA 98503",
+  "street": "4721 Parkside Drive SE",
+  "city": "Lacey",
+  "state": "WA",
+  "zip": "98503",
+  "county": "Thurston",
+  "price": 515000,
+  "status": "FOR_SALE",
+  "beds": 4,
+  "baths": 3,
+  "sqft": 1890,
+  "lot_acres": 5906.736,
+  "year_built": null,
+  "home_type": "SINGLE_FAMILY",
+  "hoa_monthly": null,
+  "tax_annual": 4172,
+  "tax_rate": 0.008100000000000001,
+  "parking": [
+    "Attached Garage"
+  ],
+  "garage_yn": true,
+  "garage_spaces": null,
+  "garage_sf_est": null,
+  "garage_dims": null,
+  "mls_id": "2550639",
+  "subdivision": null,
+  "zoning": null,
+  "sewer": null,
+  "water": null,
+  "heating": null,
+  "cooling": null,
+  "description": "This 4 bedroom house is in a prime location. The 4th bedroom is downstairs and could be the perfect office! With an empty city lot next door, no one will build next to you either! This is the perfect place to entertain, relax or just to spread out. Enter on your covered front porch to your formal from sitting area and/or dining room. This place has a great circular flow and plenty of natural light from the transom windows throughout. The kitchen opens up into the second living room and overlooks the back yard with a wall of trees for privacy. One bedroom is on the main floor with an appointed half bath, while you will find the primary with en-suite and 2 additional guest bedrooms and bathroom upstairs. The back yard is fully fenced and complete with an oversized and freshly painted back deck. It sits directly across from Rainier Vista where there are pickleball, tennis and volley ball courts and 100 acres of lush green grass, gazebos, kids park, skate park and baseball field for your enjoyment year round. You have to come see this one for yourself!",
+  "days_on_market": null,
+  "zestimate": 515400,
+  "rent_zestimate": 2567,
+  "fetched_at": "2026-10-25T18:44:51.686Z",
+  "nwmls_price": 515000,
+  "source_area": "98503",
+  "screen": {
+    "pass": true,
+    "checks": [
+      {
+        "name": "Listing price inside scenario band",
+        "state": "pass",
+        "value": 515000,
+        "rule": "$450,000 - $550,000"
+      },
+      {
+        "name": "Actively for sale",
+        "state": "pass",
+        "value": "FOR_SALE",
+        "rule": "Active / coming soon"
+      },
+      {
+        "name": "Single-family residence",
+        "state": "pass",
+        "value": "SINGLE_FAMILY",
+        "rule": "Detached house (AFH occupancy)"
+      },
+      {
+        "name": "Bedrooms for the existing home",
+        "state": "pass",
+        "value": 4,
+        "rule": ">= 3 bd in main home"
+      },
+      {
+        "name": "Garage to convert",
+        "state": "pass",
+        "value": "Attached Garage",
+        "rule": ">= 400 sf garage (2 bedrooms needs ~500-689 sf, 3 needs ~690-736 sf)"
+      },
+      {
+        "name": "HOA carry",
+        "state": "pass",
+        "value": "none",
+        "rule": "<= $1,200/yr"
+      },
+      {
+        "name": "Public sewer",
+        "state": "unknown",
+        "value": "not stated",
+        "rule": "Public sewer preferred; septic needs health jurisdiction capacity sign-off"
+      },
+      {
+        "name": "County tax rate known",
+        "state": "pass",
+        "value": "Thurston",
+        "rule": "Thurston / Lewis levy table"
+      }
+    ],
+    "fails": [],
+    "unknowns": [
+      "Public sewer"
+    ],
+    "garage_sf": null,
+    "garage_beds": null
+  },
+  "slug": "4721-parkside-drive-se-lacey-wa-98503",
+  "last_result": {
+    "run_date": "2026-10-25",
+    "best_score": 4.936255498272315,
+    "verdict": "PASS",
+    "best_case": "At asking $515,000, best tested rent $6,000/mo -> score 4.9/10, $1,307/mo cash flow, IRR 5.4%",
+    "asking_score": 4.936255498272315,
+    "asking_verdict": "PASS",
+    "asking_case": {
+      "price": 515000,
+      "rent": 6000,
+      "score": 4.94,
+      "npv": 57287,
+      "irr": 5.35,
+      "cf_mo": 1307,
+      "roi_pct": 125.6
+    },
+    "grid_best_score": 6.475029954689725,
+    "grid_best_verdict": "CONDITIONAL",
+    "rent_needed_at_ask": 6525,
+    "max_price_at_top_rent": 450000,
+    "cash_needed": 229050,
+    "passing_combos": 0,
+    "top": [
+      {
+        "price": 450000,
+        "rent": 6000,
+        "score": 6.48,
+        "irr": 7.69,
+        "cf_mo": 1718
+      },
+      {
+        "price": 475000,
+        "rent": 6000,
+        "score": 5.82,
+        "irr": 6.74,
+        "cf_mo": 1560
+      },
+      {
+        "price": 500000,
+        "rent": 6000,
+        "score": 5.22,
+        "irr": 5.86,
+        "cf_mo": 1402
+      },
+      {
+        "price": 525000,
+        "rent": 6000,
+        "score": 4.76,
+        "irr": 5.03,
+        "cf_mo": 1243
+      },
+      {
+        "price": 450000,
+        "rent": 5375,
+        "score": 4.51,
+        "irr": 4.55,
+        "cf_mo": 1225
+      }
+    ]
+  }
+}

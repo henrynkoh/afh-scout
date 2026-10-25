@@ -1,0 +1,164 @@
+{
+  "source": "Zillow",
+  "zpid": "49358455",
+  "url": "https://www.zillow.com/homedetails/718-73rd-Ave-SE-Tumwater-WA-98501/49358455_zpid/",
+  "address": "718 73rd Avenue SE, Tumwater, WA 98501",
+  "street": "718 73rd Avenue SE",
+  "city": "Tumwater",
+  "state": "WA",
+  "zip": "98501",
+  "county": "Thurston",
+  "price": 489995,
+  "status": "FOR_SALE",
+  "beds": 3,
+  "baths": 2,
+  "sqft": 1092,
+  "lot_acres": 0.86,
+  "year_built": null,
+  "home_type": "SINGLE_FAMILY",
+  "hoa_monthly": null,
+  "tax_annual": 3969,
+  "tax_rate": 0.008100000000000001,
+  "parking": [
+    "Attached Garage",
+    "RV Parking"
+  ],
+  "garage_yn": true,
+  "garage_spaces": null,
+  "garage_sf_est": null,
+  "garage_dims": null,
+  "mls_id": "2577873",
+  "subdivision": null,
+  "zoning": null,
+  "sewer": null,
+  "water": null,
+  "heating": null,
+  "cooling": null,
+  "description": "This charming one-level home has been completely remodeled and awaits a new owner. You will enjoy the peaceful privacy of this .86-acre lot. Three bedrooms, 1.5 baths, a lovely kitchen, and engineered hardwoods throughout. All doors and hardware have been replaced as well. An efficient heat pump provides both heating and cooling benefits. The oversized two-car garage is a huge benefit. Property extends across the road towards the pond (no access to pond). Close proximity to all the amenities Tumwater has to offer, with easy access to I-5.",
+  "days_on_market": null,
+  "zestimate": 487600,
+  "rent_zestimate": 2466,
+  "fetched_at": "2026-10-25T18:44:46.625Z",
+  "nwmls_price": 489995,
+  "source_area": "98501",
+  "screen": {
+    "pass": true,
+    "checks": [
+      {
+        "name": "Listing price inside scenario band",
+        "state": "pass",
+        "value": 489995,
+        "rule": "$450,000 - $550,000"
+      },
+      {
+        "name": "Actively for sale",
+        "state": "pass",
+        "value": "FOR_SALE",
+        "rule": "Active / coming soon"
+      },
+      {
+        "name": "Single-family residence",
+        "state": "pass",
+        "value": "SINGLE_FAMILY",
+        "rule": "Detached house (AFH occupancy)"
+      },
+      {
+        "name": "Bedrooms for the existing home",
+        "state": "pass",
+        "value": 3,
+        "rule": ">= 3 bd in main home"
+      },
+      {
+        "name": "Garage to convert",
+        "state": "pass",
+        "value": "Attached Garage, RV Parking",
+        "rule": ">= 400 sf garage (2 bedrooms needs ~500-689 sf, 3 needs ~690-736 sf)"
+      },
+      {
+        "name": "HOA carry",
+        "state": "pass",
+        "value": "none",
+        "rule": "<= $1,200/yr"
+      },
+      {
+        "name": "Public sewer",
+        "state": "unknown",
+        "value": "not stated",
+        "rule": "Public sewer preferred; septic needs health jurisdiction capacity sign-off"
+      },
+      {
+        "name": "County tax rate known",
+        "state": "pass",
+        "value": "Thurston",
+        "rule": "Thurston / Lewis levy table"
+      }
+    ],
+    "fails": [],
+    "unknowns": [
+      "Public sewer"
+    ],
+    "garage_sf": null,
+    "garage_beds": null
+  },
+  "slug": "718-73rd-avenue-se-tumwater-wa-98501",
+  "last_result": {
+    "run_date": "2026-10-25",
+    "best_score": 5.447310562644617,
+    "verdict": "MARGINAL",
+    "best_case": "At asking $489,995, best tested rent $6,000/mo -> score 5.4/10, $1,465/mo cash flow, IRR 6.2%",
+    "asking_score": 5.447310562644617,
+    "asking_verdict": "MARGINAL",
+    "asking_case": {
+      "price": 489995,
+      "rent": 6000,
+      "score": 5.45,
+      "npv": 64221,
+      "irr": 6.2,
+      "cf_mo": 1465,
+      "roi_pct": 129.4
+    },
+    "grid_best_score": 6.475029954689725,
+    "grid_best_verdict": "CONDITIONAL",
+    "rent_needed_at_ask": 6325,
+    "max_price_at_top_rent": 450000,
+    "cash_needed": 222299,
+    "passing_combos": 0,
+    "top": [
+      {
+        "price": 450000,
+        "rent": 6000,
+        "score": 6.48,
+        "irr": 7.69,
+        "cf_mo": 1718
+      },
+      {
+        "price": 475000,
+        "rent": 6000,
+        "score": 5.82,
+        "irr": 6.74,
+        "cf_mo": 1560
+      },
+      {
+        "price": 500000,
+        "rent": 6000,
+        "score": 5.22,
+        "irr": 5.86,
+        "cf_mo": 1402
+      },
+      {
+        "price": 525000,
+        "rent": 6000,
+        "score": 4.76,
+        "irr": 5.03,
+        "cf_mo": 1243
+      },
+      {
+        "price": 450000,
+        "rent": 5375,
+        "score": 4.51,
+        "irr": 4.55,
+        "cf_mo": 1225
+      }
+    ]
+  }
+}

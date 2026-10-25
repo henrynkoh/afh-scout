@@ -1,0 +1,164 @@
+{
+  "source": "Zillow",
+  "zpid": "460548275",
+  "url": "https://www.zillow.com/homedetails/4812-Luminous-Way-NW-LOT-29-Olympia-WA-98502/460548275_zpid/",
+  "address": "4812 Luminous (Lot 29) Way NW, Olympia, WA 98502",
+  "street": "4812 Luminous (Lot 29) Way NW",
+  "city": "Olympia",
+  "state": "WA",
+  "zip": "98502",
+  "county": "Thurston",
+  "price": 524950,
+  "status": "FOR_SALE",
+  "beds": 3,
+  "baths": 3,
+  "sqft": 2230,
+  "lot_acres": 3998.808,
+  "year_built": null,
+  "home_type": "SINGLE_FAMILY",
+  "hoa_monthly": 107,
+  "tax_annual": 4252,
+  "tax_rate": 0.008100000000000001,
+  "parking": [
+    "Attached Garage"
+  ],
+  "garage_yn": true,
+  "garage_spaces": null,
+  "garage_sf_est": null,
+  "garage_dims": null,
+  "mls_id": "2481419",
+  "subdivision": null,
+  "zoning": null,
+  "sewer": null,
+  "water": null,
+  "heating": null,
+  "cooling": null,
+  "description": "Discover open-concept living in this PRE-SALE 2,230 sq. ft. 2-story home featuring 3 bedrooms, 2.25 bathrooms, a spacious loft, & a desirable homesite backing to a greenbelt! CHOOSE & PERSONALIZE your home to fit your lifestyle w/structural options such as a back patio, deluxe primary bathroom, electric fireplace, or 9' main-floor ceilings. Need more bedrooms? Choose an optional 3- or 4-bedroom configuration in lieu of the loft. The primary bedroom features a private ensuite bath & walk-in closet. Bring your vision to life in our Design Studio, where you can personalize finishes from flooring & countertops to cabinetry, fixtures, & hardware. Enjoy quality included features such as white-painted millwork, quartz countertops throughout, soft-close cabinetry doors, & LVP flooring in the entry, kitchen, bathrooms, & laundry. Your new home also includes a fully landscaped & fenced backyard w/pre-stained wood fencing & an access gate, plus an energy-efficient heat pump. These ENERGY STAR® certified homes offer exceptional efficiency & comfort. Enjoy a level of personalization & choice rarely found in this price range! Conveniently located w/easy access to I-5, JBLM, the State Capitol, & ",
+  "days_on_market": null,
+  "zestimate": 524400,
+  "rent_zestimate": 2912,
+  "fetched_at": "2026-10-25T18:44:49.795Z",
+  "nwmls_price": 524950,
+  "source_area": "98502",
+  "screen": {
+    "pass": true,
+    "checks": [
+      {
+        "name": "Listing price inside scenario band",
+        "state": "pass",
+        "value": 524950,
+        "rule": "$450,000 - $550,000"
+      },
+      {
+        "name": "Actively for sale",
+        "state": "pass",
+        "value": "FOR_SALE",
+        "rule": "Active / coming soon"
+      },
+      {
+        "name": "Single-family residence",
+        "state": "pass",
+        "value": "SINGLE_FAMILY",
+        "rule": "Detached house (AFH occupancy)"
+      },
+      {
+        "name": "Bedrooms for the existing home",
+        "state": "pass",
+        "value": 3,
+        "rule": ">= 3 bd in main home"
+      },
+      {
+        "name": "Garage to convert",
+        "state": "pass",
+        "value": "Attached Garage",
+        "rule": ">= 400 sf garage (2 bedrooms needs ~500-689 sf, 3 needs ~690-736 sf)"
+      },
+      {
+        "name": "HOA carry",
+        "state": "unknown",
+        "value": "$107/mo",
+        "rule": "<= $1,200/yr"
+      },
+      {
+        "name": "Public sewer",
+        "state": "unknown",
+        "value": "not stated",
+        "rule": "Public sewer preferred; septic needs health jurisdiction capacity sign-off"
+      },
+      {
+        "name": "County tax rate known",
+        "state": "pass",
+        "value": "Thurston",
+        "rule": "Thurston / Lewis levy table"
+      }
+    ],
+    "fails": [],
+    "unknowns": [
+      "HOA carry",
+      "Public sewer"
+    ],
+    "garage_sf": null,
+    "garage_beds": null
+  },
+  "slug": "4812-luminous-lot-29-way-nw-olympia-wa-98502",
+  "last_result": {
+    "run_date": "2026-10-25",
+    "best_score": 4.413879234535654,
+    "verdict": "PASS",
+    "best_case": "At asking $524,950, best tested rent $6,000/mo -> score 4.4/10, $1,137/mo cash flow, IRR 4.4%",
+    "asking_score": 4.413879234535654,
+    "asking_verdict": "PASS",
+    "asking_case": {
+      "price": 524950,
+      "rent": 6000,
+      "score": 4.41,
+      "npv": 47731,
+      "irr": 4.42,
+      "cf_mo": 1137,
+      "roi_pct": 121.1
+    },
+    "grid_best_score": 6.0027458981722,
+    "grid_best_verdict": "MARGINAL",
+    "rent_needed_at_ask": 6725,
+    "max_price_at_top_rent": 430000,
+    "cash_needed": 231737,
+    "passing_combos": 0,
+    "top": [
+      {
+        "price": 450000,
+        "rent": 6000,
+        "score": 6,
+        "irr": 7.02,
+        "cf_mo": 1611
+      },
+      {
+        "price": 475000,
+        "rent": 6000,
+        "score": 5.37,
+        "irr": 6.09,
+        "cf_mo": 1453
+      },
+      {
+        "price": 500000,
+        "rent": 6000,
+        "score": 4.87,
+        "irr": 5.22,
+        "cf_mo": 1295
+      },
+      {
+        "price": 525000,
+        "rent": 6000,
+        "score": 4.41,
+        "irr": 4.42,
+        "cf_mo": 1136
+      },
+      {
+        "price": 450000,
+        "rent": 5375,
+        "score": 4.15,
+        "irr": 3.87,
+        "cf_mo": 1118
+      }
+    ]
+  }
+}
